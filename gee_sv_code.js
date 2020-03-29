@@ -1,10 +1,9 @@
-// 1. MapBiomas 4 Data
-var mapbiomas = ee.Image('projects/mapbiomas-workspace/public/collection4/mapbiomas_collection40_integration_v1').byte();
-//var mapbiomas = mapbiomas_.clip(rebio);
+// 0. MapBiomas Data (Colection 4.1)
+var brazil = ee.FeatureCollection("users/celsohlsj/brazil");
+var mapbiomas = ee.Image('projects/mapbiomas-workspace/public/collection4_1/mapbiomas_collection41_integration_v1').byte();
 
-// 2. Reclassify MapBiomas 4 Data
+// 1. Reclassifying MapBiomas Data #Step 1
 var nameBands = mapbiomas.bandNames().getInfo(); 
-print("Band Names", nameBands);
 var dumb = nameBands.map(remapband);
 
 function remapband(band){
@@ -17,12 +16,9 @@ function remapband(band){
 
 var mapbiomas_forest = mapbiomas.select(mapbiomas.bandNames().slice(34));
 var nameBands_f = mapbiomas_forest.bandNames().getInfo();
-print("Band Names - Forest", nameBands_f);
-Map.addLayer(mapbiomas_forest.select("classification_2018_r"), {min: 0, max: 1, palette: ["e7e7e7","006a15"]}, "MapBiomas - Forest 2018");
 
-// 3. Mapping Secondary Forest
+// 2. Mapping the Annual Secondary Vegetation  #Step 2
 var empty = ee.Image().byte();
-print("Emply Secondary Forest", empty);
 
 for (var i=1; i<34; i++)  {
     var y1 = 1984+i;
@@ -35,22 +31,13 @@ for (var i=1; i<34; i++)  {
     sforest = sforest.remap([0,1,2,3],[0,1,0,0]).rename(ee.String(year2).cat("_s"));
     empty = empty.addBands(sforest);
 }
-
 var sforest_all = empty.select(empty.bandNames().slice(1));
-print('S Forest', sforest_all);
-Map.addLayer(sforest_all.select("classification_1986_r_s"), {min: 0, max: 1, palette: ["e7e7e7","FF0000"]}, "MapBiomas - Secondary Forest 1986");
-Map.addLayer(sforest_all.select("classification_2018_r_s"), {min: 0, max: 1, palette: ["e7e7e7","FF0000"]}, "MapBiomas - Secondary Forest 2018");
 
-// 4. Mapping Acumulate Secondary Forest
+// 3. Mapping the Accumulated Secondary Vegetation  #Step 3
 var empty = ee.Image().byte();
-print("Emply Secondary Forest Age", empty);
-
 var age = sforest_all.select('classification_1986_r_s');
 age = age.rename(ee.String('classification_1986_r_s_acm'));
 empty = empty.addBands(age);
-//var empty = empty.bandNames();
-var empty = empty.slice(1);
-print("Teste Aqui", empty);
 
 for (var i=1; i<33; i++)  {
     var y = 1986+i;
@@ -64,23 +51,15 @@ for (var i=1; i<33; i++)  {
     var remap = acm_forest.remap(oldvalues,newvalues);
     empty = empty.addBands(remap.rename(ee.String(year).cat("_acm")));
 }
+var acm_sforest = empty.select(empty.bandNames().slice(1));
 
-var acm_sforest = empty;
-print('Acumulate Secondary',acm_sforest);
-Map.addLayer(empty.select("classification_2018_r_s_acm"), {min: 0, max: 1, palette: ["e7e7e7","FF0000"]}, "MapBiomas - Secondary ACM Forest 2018");
-
-
-// 5. Mapping Secondary Forest Age
+// 4. Calculating the Age of Secondary Vegetation  #Step 4
 var empty = ee.Image().byte();
-print("Emply Secondary Forest Age", empty);
-
 var age = acm_sforest.select('classification_1986_r_s_acm');
-age = age.rename(ee.String('classification_1986_r_s_age'));
+age = age.rename(ee.String('classification_1986_r_s_acm_age'));
 empty = empty.addBands(age);
-//var empty = empty.bandNames();
 var empty = empty.slice(1);
 var empty2 = empty;
-print("Teste Aqui", empty);
 
 for (var i=1; i<33; i++)  {
     var y = 1986+i;
@@ -88,22 +67,26 @@ for (var i=1; i<33; i++)  {
     var sforest = acm_sforest.select(year);
     var ageforest = empty.add(sforest);
     var year2 = 'classification_'+y+'_r';
-    var FYear = mapbiomas_forest.select(year2); //.eq(0)
-    //ageforest = ageforest.updateMask(FYear);
+    var FYear = mapbiomas_forest.select(year2);
     ageforest = ageforest.multiply(FYear);
-    empty2 = empty2.addBands(ageforest.rename(ee.String(year).cat("_age"))); //.unmask(0)
+    empty2 = empty2.addBands(ageforest.rename(ee.String(year).cat("_age")));
     var empty = ageforest;
 }
+var sforest_age = empty2;
 
-print('Secondary Ages',empty2);
+// Export Data to Google Drive
+Export.image.toAsset({
+          image: sforest_all,
+          description: 'secondary_forest_collection41_v1', 
+          scale: 30, 
+          region: brazil,
+          maxPixels:1e13
+});
 
-var palettes = require('users/gena/packages:palettes');
-var palette = palettes.colorbrewer.YlOrRd[9];
-Map.addLayer(empty2.select("classification_2017_r_s_acm_age").mask(empty2.select("classification_2017_r_s_acm_age")), {min: 1, max: 33, palette: palette}, "MapBiomas - Secondary Forest Age 2018");
-
-
-//Export.image.toDrive({
-//  image: empty2.clip(rebio),
-//  description: 'SForest_Age_1986_2018_REBIO',
-//  scale: 30
-//});
+Export.image.toAsset({
+          image: sforest_age,
+          description: 'secondary_forest_age_collection41_v1', 
+          scale: 30, 
+          region: brazil,
+          maxPixels:1e13
+});
