@@ -1,7 +1,7 @@
-![Github](https://img.shields.io/badge/Github-0.0.1-green.svg)
+![Github](https://img.shields.io/badge/Github-0.0.2-green.svg)
 ![licence](https://img.shields.io/badge/Licence-GPL--3-blue.svg)
 
-# Benchmark maps of 33 years of secondary-growth vegetation age for Brazil
+# Benchmark maps of 33 years of secondary vegetation age for Brazil
 
 
 ## Background:
@@ -10,7 +10,6 @@ The growth of 12 million ha of secondary forests is one of the main mitigation s
 
 ## Associated Publications:
 #### The maps are described in the following manuscript:
-Spawn, S.A., C.C. Sullivan, T.J. Lark, H.K. Gibbs. Harmonized Global Maps of Above and Belowground Biomass Carbon Density in the Year 2010. Scientific Data .
-Silva Junior et al. Secondary vegetation age maps for Brazil from 1986 to 2018. 2020. Scientific Data (in review).
+Silva Junior et al. Benchmark maps of 33 years of secondary vegetation age for Brazil. 2020. Scientific Data (in review).
 
 #### The final data layers can be accessed from the Zenodo repository: https://zenodo.org/deposit/3734980
