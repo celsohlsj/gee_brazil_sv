@@ -1,25 +1,27 @@
-/*
+/**
  * @name
- * Brazilian Secondary Vegetation Toolkit Download - User vectores
+ * Brazilian Secondary Vegetation Toolkit Download - User vectores    
  * 
  * @description
- *      Adapted from Mapbiomas User Toolkit Download - User vectores
+ *      Adapted from Mapbiomas User Toolkit Download - User vectores.
  *  
  * @author
- *      João Siqueira (Original Author)
+ *      Original Author
+ *      João Siqueira
  *      contato@mapbiomas.org
- *      Juan Doblas (Adaptation)
+ * 
+ *      Adaptation
+ *      Juan Doblas
  *      juandb@gmail.com
  * 
  * @version
  *    0.0.1 - First version
  * 
-*/
+ */
 var palettes = require('users/gena/packages:palettes');
 palettes.colorbrewer.YlOrRd[9];
 var image = ee.Image("users/celsohlsj/logo_ok");
 var logo = ui.Thumbnail({image:image,params:{bands:['b1','b2','b3'],min:0,max:255},style:{width:'150px',height:'77px'}});
-
 
 var App = {
 
@@ -27,14 +29,15 @@ var App = {
         version: '0.0.1',
         logo: logo,
         assets: {
-            age: 'users/celsohlsj/public/secondary_forest_age_collection41_v1',
-            increment: 'users/celsohlsj/public/secondary_forest_collection41_v1',
-            mangroveAge:'users/celsohlsj/public/secondary_forest_age_mangrove_collection41_v1',
-            plantationAge:'users/celsohlsj/public/secondary_forest_age_plantation_collection41_v1',
-            savannaAge:'users/celsohlsj/public/secondary_forest_age_savanna_collection41_v1',
-            mangroveIncrement:'users/celsohlsj/public/secondary_forest_mangrove_collection41_v1',
-            plantationIncrement:'users/celsohlsj/public/secondary_forest_plantation_collection41_v1',
-            savannaIncrement:'users/celsohlsj/public/secondary_forest_savanna_collection41_v1',
+            age:'users/celsohlsj/public/secondary_forest_age_collection41_v1',
+            extent:'users/celsohlsj/public/secondary_forest_extent_collection41_v1',
+            increment:'users/celsohlsj/public/secondary_forest_increment_collection41_v1',
+            mangroveAge:'users/celsohlsj/public/secondary_mangrove_age_collection41_v1',
+            mangroveExtent:'users/celsohlsj/public/secondary_mangrove_extent_collection41_v1',
+            mangroveIncrement:'users/celsohlsj/public/secondary_mangrove_increment_collection41_v1',
+            plantationAge:'users/celsohlsj/public/secondary_plantation_age_collection41_v1',
+            plantationExtent:'users/celsohlsj/public/secondary_plantation_extent_collection41_v1',
+            plantationIncrement:'users/celsohlsj/public/secondary_plantation_increment_collection41_v1',
             vectors: [
                 'projects/mapbiomas-workspace/AUXILIAR/areas-protegidas',
                 'projects/mapbiomas-workspace/AUXILIAR/municipios-2016',
@@ -99,23 +102,26 @@ var App = {
             'Forest_Age': null,
             'Mangrove_Age': null,
             'Plantation_Age': null,
-            'Savanna_Age': null,
+            'Forest_Extent': null,
+            'Mangrove_Extent': null,
+            'Plantation_Extent': null,
             'Forest_Increment': null,
             'Mangrove_Increment': null,
             'Plantation_Increment': null,
-            'Savanna_Increment': null,
+            
         },
 
 
         ranges: {
             'Forest_Age': {'min': 0,'max': 33},
-            'Forest_Increment': {'min': 0,'max': 1},
             'Mangrove_Age':{'min': 0,'max': 33},
             'Plantation_Age': {'min': 0,'max': 33},
-            'Savanna_Age': {'min': 0,'max': 33},
+            'Forest_Increment': {'min': 0,'max': 1},
             'Mangrove_Increment':  {'min': 0,'max': 1},
             'Plantation_Increment':  {'min': 0,'max': 1},
-            'Savanna_Increment':  {'min': 0,'max': 1},
+            'Forest_Extent': {'min': 0,'max': 1},
+            'Mangrove_Extent':  {'min': 0,'max': 1},
+            'Plantation_Extent':  {'min': 0,'max': 1},
 
             
         },
@@ -126,13 +132,14 @@ var App = {
 
         palette: {
             'Forest_Age': palettes.colorbrewer.YlOrRd[9],
-            'Forest_Increment': ['ffffff', 'ff0000'],
             'Mangrove_Age':palettes.colorbrewer.YlOrRd[9],
             'Plantation_Age':palettes.colorbrewer.YlOrRd[9],
-            'Savanna_Age': palettes.colorbrewer.YlOrRd[9],
+            'Forest_Increment': ['ffffff', 'ff0000'],
             'Mangrove_Increment':  ['ffffff', 'ff0000'],
             'Plantation_Increment':   ['ffffff', 'ff0000'],
-            'Savanna_Increment': ['ffffff', 'ff0000'],
+            'Forest_Extent': ['ffffff', 'ff0000'],
+            'Mangrove_Extent':  ['ffffff', 'ff0000'],
+            'Plantation_Extent':   ['ffffff', 'ff0000'],
 
         },
 
@@ -160,13 +167,15 @@ var App = {
     loadImages: function () {
 
         App.options.data.Forest_Age = ee.Image(App.options.assets.age);
-        App.options.data.Forest_Increment = ee.Image(App.options.assets.increment);
         App.options.data.Mangrove_Age = ee.Image(App.options.assets.mangroveAge);
         App.options.data.Plantation_Age = ee.Image(App.options.assets.plantationAge);
-        App.options.data.Savanna_Age = ee.Image(App.options.assets.savannaAge);
+        App.options.data.Forest_Increment = ee.Image(App.options.assets.increment);
         App.options.data.Mangrove_Increment = ee.Image(App.options.assets.mangroveIncrement);
         App.options.data.Plantation_Increment = ee.Image(App.options.assets.plantationIncrement);
-        App.options.data.Savanna_Increment = ee.Image(App.options.assets.savannaIncrement);
+        App.options.data.Forest_Extent = ee.Image(App.options.assets.extent);
+        App.options.data.Mangrove_Extent = ee.Image(App.options.assets.mangroveExtent);
+        App.options.data.Plantation_Extent = ee.Image(App.options.assets.plantationExtent);
+
     },
 //            'Mangrove_Age': null,
 //            'Plantation_Age': null,
@@ -712,7 +721,7 @@ var App = {
                 },
             }),
 
-            labelCollection: ui.Label('Based on MapBiomas Collection 4.1', {
+            labelCollection: ui.Label('Based in the MapBiomas Collection 4.1', {
                 'fontWeight': 'bold',
                 'padding': '1px',
                 'fontSize': '12px'
@@ -802,7 +811,7 @@ var App = {
             }),
 
             selectDataType: ui.Select({
-                'items': ['Forest_Age','Mangrove_Age','Plantation_Age','Savanna_Age', 'Forest_Increment','Mangrove_Increment','Plantation_Increment','Savanna_Increment'],
+                'items': ['Forest_Age','Mangrove_Age','Plantation_Age', 'Forest_Increment','Mangrove_Increment','Plantation_Increment', 'Forest_Extent','Mangrove_Extent','Plantation_Extent'],
                 'placeholder': 'Forest_Age',
                 'style': {
                     'stretch': 'horizontal'
