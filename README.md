@@ -1,4 +1,4 @@
-![Github](https://img.shields.io/badge/Github-0.0.2-green.svg)
+![Github](https://img.shields.io/badge/Github-0.0.3-green.svg)
 ![licence](https://img.shields.io/badge/Licence-GPL--3-blue.svg)
 
 # Benchmark maps of 33 years of secondary vegetation age for Brazil
@@ -14,7 +14,7 @@ Silva Junior et al. Benchmark maps of 33 years of secondary vegetation age for B
 
 ## Dataset access
 #### Tiles structure of the dataset:
-![](https://github.com/carlos-alberto-silva/rGEDI/blob/master/readme/fig1.png)<br/>
+![](https://github.com/celsohlsj/gee_brazil_sv/img/tiles.jpg)<br/>
 
 #### The final data layers can be accessed from the Zenodo repository: https://zenodo.org/deposit/3734980
 
