@@ -14,7 +14,8 @@ Silva Junior et al. Benchmark maps of 33 years of secondary vegetation age for B
 
 ## Dataset access
 #### Tiles structure of the dataset:
-![Tiles](https://drive.google.com/uc?export=view&id=1l_M7XnboV8dcwBfOxnianpdt9sV6Mcpv width=500)
+<img src="https://drive.google.com/uc?export=view&id=1l_M7XnboV8dcwBfOxnianpdt9sV6Mcpv" width="500">
+![Tiles](https://drive.google.com/uc?export=view&id=1l_M7XnboV8dcwBfOxnianpdt9sV6Mcpv)
 
 #### The final data layers can be accessed from the Zenodo repository: https://zenodo.org/deposit/3734980
 
