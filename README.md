@@ -12,6 +12,10 @@ The restoration and reforestation of 12 million hectares of forests by 2030 is o
 #### The maps are described in the following manuscript:
 Silva Junior et al. Benchmark maps of 33 years of secondary vegetation age for Brazil. 2020. Scientific Data (in review).
 
+## Dataset access
+#### Tiles structure of the dataset:
+![](https://github.com/carlos-alberto-silva/rGEDI/blob/master/readme/fig1.png)<br/>
+
 #### The final data layers can be accessed from the Zenodo repository: https://zenodo.org/deposit/3734980
 
 #### The final data layers (forest, plantations and mangroves) can also be accessed through the Toolkit Download by administrative boundaries (states and municipalities), watersheds, biomes, and protected areas: https://code.earthengine.google.com/8167e496056c42e9e856b324c2cbea3f?hideCode=true
