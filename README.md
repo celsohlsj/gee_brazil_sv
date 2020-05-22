@@ -5,8 +5,7 @@
 
 
 ## Background:
-The restoration and reforestation of 12 million hectares of forests by 2030 are one of the leading mitigation strategies for reducing carbon emissions within the Brazilian Nationally Determined Contribution. Understanding the dynamics of forest cover, which steeply decreased between 1985 and 2018, is essential for estimating the global carbon balance. The long-term extent and age of secondary-growth vegetation, which are crucial elements for calculating the net carbon budget, however, are yet poorly quantified. Here we developed a 30-m spatial resolution dataset of the annual extent and age of secondary vegetation for Brazil over the 1986-2018 period. Land-cover maps from MapBiomas (Collection 4.1) were used as input data for our algorithm, implemented in the Google Earth Engine platform. Our secondary vegetation dataset provides yearly 33 maps of the extent and 33 maps of age. All maps are in Geographic Coordinate System with Datum WGS84, in compressed TIFF format. This dataset provides critical spatially explicit information for supporting public policies and decision-making, enabling environmental science applications, territorial planning, and environmental law enforcement.
-
+It will be added after the peer-review process.
 
 ## Associated Publications:
 #### The maps are described in the following manuscript:
