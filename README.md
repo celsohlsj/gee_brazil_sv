@@ -1,7 +1,7 @@
 ![Github](https://img.shields.io/badge/Github-0.0.4-green.svg)
 ![licence](https://img.shields.io/badge/Licence-GPL--3-blue.svg)
 
-# Benchmark maps of 33 years of secondary vegetation age for Brazil
+# Benchmark maps of 33 years of secondary forest age for Brazil
 
 
 ## Background:
@@ -9,7 +9,7 @@ It will be added after the peer-review process.
 
 ## Associated Publications:
 #### The maps are described in the following manuscript:
-Silva Junior et al. Benchmark maps of 33 years of secondary vegetation age for Brazil. 2020. Scientific Data (in review).
+Silva Junior et al. Benchmark maps of 33 years of secondary forest age for Brazil. 2020. Scientific Data (in review).
 
 ## Dataset access
 #### Tiles structure of the dataset:
