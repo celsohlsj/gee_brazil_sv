@@ -1,4 +1,4 @@
-![Github](https://img.shields.io/badge/Github-0.0.4-green.svg)
+![Github](https://img.shields.io/badge/Github-0.0.5-green.svg)
 ![licence](https://img.shields.io/badge/Licence-GPL--3-blue.svg)
 
 # Benchmark maps of 33 years of secondary forest age for Brazil
