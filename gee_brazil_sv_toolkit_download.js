@@ -15,29 +15,23 @@
  *      juandb@gmail.com
  * 
  * @version
- *    0.0.1 - First version
+ *    0.0.2 - Second version
  * 
  */
 var palettes = require('users/gena/packages:palettes');
 palettes.colorbrewer.YlOrRd[9];
 var image = ee.Image("users/celsohlsj/logo_ok");
-var logo = ui.Thumbnail({image:image,params:{bands:['b1','b2','b3'],min:0,max:255},style:{width:'150px',height:'77px'}});
-
-var App = {
+var logo = ui.Thumbnail({image:image,params:{bands:['b1','b2','b3'],min:0,max:255},style:{width:'150px',height:'77px'}});var App = {
 
     options: {
-        version: '0.0.1',
+        version: '0.0.2',
         logo: logo,
         assets: {
-            age:'users/celsohlsj/public/secondary_forest_age_collection41_v1',
-            extent:'users/celsohlsj/public/secondary_forest_extent_collection41_v1',
-            increment:'users/celsohlsj/public/secondary_forest_increment_collection41_v1',
-            mangroveAge:'users/celsohlsj/public/secondary_mangrove_age_collection41_v1',
-            mangroveExtent:'users/celsohlsj/public/secondary_mangrove_extent_collection41_v1',
-            mangroveIncrement:'users/celsohlsj/public/secondary_mangrove_increment_collection41_v1',
-            plantationAge:'users/celsohlsj/public/secondary_plantation_age_collection41_v1',
-            plantationExtent:'users/celsohlsj/public/secondary_plantation_extent_collection41_v1',
-            plantationIncrement:'users/celsohlsj/public/secondary_plantation_increment_collection41_v1',
+          
+            age:'users/celsohlsj/public/secondary_forest_age_collection41_v2',
+            extent:'users/celsohlsj/public/secondary_forest_extent_collection41_v2',
+            increment:'users/celsohlsj/public/secondary_forest_increment_collection41_v2',
+            loss: 'users/celsohlsj/public/secondary_forest_loss_collection41_v2',
             vectors: [
                 'projects/mapbiomas-workspace/AUXILIAR/areas-protegidas',
                 'projects/mapbiomas-workspace/AUXILIAR/municipios-2016',
@@ -90,7 +84,19 @@ var App = {
                 '2009', '2010', '2011', '2012',
                 '2013', '2014', '2015', '2016',
                 '2017', '2018'
+            ],
+            'Loss': [
+                '1987', '1988',
+                '1989', '1990', '1991', '1992',
+                '1993', '1994', '1995', '1996',
+                '1997', '1998', '1999', '2000',
+                '2001', '2002', '2003', '2004',
+                '2005', '2006', '2007', '2008',
+                '2009', '2010', '2011', '2012',
+                '2013', '2014', '2015', '2016',
+                '2017', '2018'
             ]
+
         },
         bandsNames: {
             'General': 'classification_',
@@ -100,30 +106,17 @@ var App = {
 
         data: {
             'Forest_Age': null,
-            'Mangrove_Age': null,
-            'Plantation_Age': null,
             'Forest_Extent': null,
-            'Mangrove_Extent': null,
-            'Plantation_Extent': null,
             'Forest_Increment': null,
-            'Mangrove_Increment': null,
-            'Plantation_Increment': null,
-            
+            'Forest_Loss': null
         },
 
 
         ranges: {
             'Forest_Age': {'min': 0,'max': 33},
-            'Mangrove_Age':{'min': 0,'max': 33},
-            'Plantation_Age': {'min': 0,'max': 33},
             'Forest_Increment': {'min': 0,'max': 1},
-            'Mangrove_Increment':  {'min': 0,'max': 1},
-            'Plantation_Increment':  {'min': 0,'max': 1},
             'Forest_Extent': {'min': 0,'max': 1},
-            'Mangrove_Extent':  {'min': 0,'max': 1},
-            'Plantation_Extent':  {'min': 0,'max': 1},
-
-            
+            'Forest_Loss': {'min': 0,'max': 1}
         },
 
         vector: null,
@@ -132,14 +125,9 @@ var App = {
 
         palette: {
             'Forest_Age': palettes.colorbrewer.YlOrRd[9],
-            'Mangrove_Age':palettes.colorbrewer.YlOrRd[9],
-            'Plantation_Age':palettes.colorbrewer.YlOrRd[9],
             'Forest_Increment': ['ffffff', 'ff0000'],
-            'Mangrove_Increment':  ['ffffff', 'ff0000'],
-            'Plantation_Increment':   ['ffffff', 'ff0000'],
             'Forest_Extent': ['ffffff', 'ff0000'],
-            'Mangrove_Extent':  ['ffffff', 'ff0000'],
-            'Plantation_Extent':   ['ffffff', 'ff0000'],
+            'Forest_Loss':  ['ffffff', 'ff0000'],
 
         },
 
@@ -167,14 +155,9 @@ var App = {
     loadImages: function () {
 
         App.options.data.Forest_Age = ee.Image(App.options.assets.age);
-        App.options.data.Mangrove_Age = ee.Image(App.options.assets.mangroveAge);
-        App.options.data.Plantation_Age = ee.Image(App.options.assets.plantationAge);
         App.options.data.Forest_Increment = ee.Image(App.options.assets.increment);
-        App.options.data.Mangrove_Increment = ee.Image(App.options.assets.mangroveIncrement);
-        App.options.data.Plantation_Increment = ee.Image(App.options.assets.plantationIncrement);
         App.options.data.Forest_Extent = ee.Image(App.options.assets.extent);
-        App.options.data.Mangrove_Extent = ee.Image(App.options.assets.mangroveExtent);
-        App.options.data.Plantation_Extent = ee.Image(App.options.assets.plantationExtent);
+        App.options.data.Forest_Loss = ee.Image(App.options.assets.loss);
 
     },
 //            'Mangrove_Age': null,
@@ -811,7 +794,7 @@ var App = {
             }),
 
             selectDataType: ui.Select({
-                'items': ['Forest_Age','Mangrove_Age','Plantation_Age', 'Forest_Increment','Mangrove_Increment','Plantation_Increment', 'Forest_Extent','Mangrove_Extent','Plantation_Extent'],
+                'items': ['Forest_Age','Forest_Increment','Forest_Extent','Forest_Loss'],
                 'placeholder': 'Forest_Age',
                 'style': {
                     'stretch': 'horizontal'
