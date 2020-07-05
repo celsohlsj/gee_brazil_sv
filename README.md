@@ -1,4 +1,4 @@
-![Github](https://img.shields.io/badge/Github-0.0.6-green.svg)
+![Github](https://img.shields.io/badge/Github-0.0.7-green.svg)
 ![licence](https://img.shields.io/badge/Licence-GPL--3-blue.svg)
 [![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.3734980.svg)](http://dx.doi.org/10.5281/zenodo.3734980)
 
