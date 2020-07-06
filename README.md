@@ -19,3 +19,9 @@ Silva Junior et al. Benchmark maps of 33 years of secondary forest age for Brazi
 #### The final data layers can be accessed from the Zenodo repository: https://doi.org/[?]
 
 #### The final data layers can also be accessed through the Toolkit Download by administrative boundaries (states and municipalities), watersheds, biomes, and protected areas: https://code.earthengine.google.com/13bfcedb77ac7bac9ea1fb962b587a54?hideCode=true
+
+#### Access to data asset in Google Earth Engine:
+ID: users/celsohlsj/public/secondary_forest_age_collection41_v2
+ID: users/celsohlsj/public/secondary_forest_extent_collection41_v2
+ID: users/celsohlsj/public/secondary_forest_increment_collection41_v2
+ID: users/celsohlsj/public/secondary_forest_loss_collection41_v2
