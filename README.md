@@ -1,6 +1,7 @@
 ![Github](https://img.shields.io/badge/Github-0.0.7-green.svg)
 ![licence](https://img.shields.io/badge/Licence-GPL--3-blue.svg)
 [![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.3928660.svg)](http://dx.doi.org/10.5281/zenodo.3928660)
+![GitHub All Releases](https://img.shields.io/github/downloads/celsohlsj/gee_brazil_sv/total)
 
 # Benchmark maps of 33 years of secondary forest age for Brazil
 
