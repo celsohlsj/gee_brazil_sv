@@ -12,7 +12,7 @@ The restoration and reforestation of 12 million hectares of forests by 2030 are 
 
 ## Associated Publications:
 #### The maps are described in the following manuscript:
-Silva Junior, C.H.L., Heinrich, V.H.A., Freire, A.T.G., Broggio, I.S., Rosan, T.M., Doblas, J., Anderson, L.O., Rousseau, G.X., Shimabukuro, Y.E., Silva, C.A., House, J.I., Aragão, L.E.O.C. Benchmark maps of 33 years of secondary forest age for Brazil. Sci. Data (2020). https://doi.org/10.1038/s41597-020-00600-4
+Silva Junior, C.H.L., Heinrich, V.H.A., Freire, A.T.G., Broggio, I.S., Rosan, T.M., Doblas, J., Anderson, L.O., Rousseau, G.X., Shimabukuro, Y.E., Silva, C.A., House, J.I., Aragão, L.E.O.C. Benchmark maps of 33 years of secondary forest age for Brazil. Scientific Data (2020). https://doi.org/10.1038/s41597-020-00600-4
 
 ## Dataset access
 #### Tiles structure of the dataset:
