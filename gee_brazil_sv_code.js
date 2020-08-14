@@ -1,11 +1,11 @@
 // Brazilian Secondary Forests Maping
-// **********************************************************************************************************************************************************************
+// ***********************************************************************************************************************************************************************
 //  * Institution:    National institute for space Research (INPE)
 //  * Purpose:        Map the increment, extent, age and loss of secondary forests in Brazil.
 //  * Author:         Celso H. L. Silva Junior
 //  * Email:          celsohlsj@gmail.com
 //  * Please cite as: Silva Junior, C.H.L. et al. Benchmark maps of 33 years of secondary forest age for Brazil. Scientific Data (2020). doi: 10.1038/s41597-020-00600-4
-// **********************************************************************************************************************************************************************
+// ***********************************************************************************************************************************************************************
 
 // 0. MapBiomas Data (Colection 4.1)
 var brazil = ee.FeatureCollection("users/celsohlsj/brazil");
