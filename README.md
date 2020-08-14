@@ -11,7 +11,7 @@ It will be added after the peer-review process.
 
 ## Associated Publications:
 #### The maps are described in the following manuscript:
-Silva Junior et al. Benchmark maps of 33 years of secondary forest age for Brazil. 2020. Scientific Data (Accepted Manuscript).
+Silva Junior, C.H.L., Heinrich, V.H.A., Freire, A.T.G., Broggio, I.S., Rosan, T.M., Doblas, J., Anderson, L.O., Rousseau, G.X., Shimabukuro, Y.E., Silva, C.A., House, J.I., Aragão, L.E.O.C. (2020). Benchmark maps of 33 years of secondary forest age for Brazil. Sci. Data. https://doi.org/10.1038/s41597-020-00600-4
 
 ## Dataset access
 #### Tiles structure of the dataset:
