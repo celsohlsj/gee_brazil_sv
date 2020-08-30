@@ -28,8 +28,3 @@ ID: users/celsohlsj/public/secondary_forest_age_collection41_v2<br />
 ID: users/celsohlsj/public/secondary_forest_extent_collection41_v2<br />
 ID: users/celsohlsj/public/secondary_forest_increment_collection41_v2<br />
 ID: users/celsohlsj/public/secondary_forest_loss_collection41_v2
-###### Data asset for Amazonia (v1)
-ID: users/celsohlsj/public/secondary_forest_age_amazonia_collection2_v1<br />
-ID: users/celsohlsj/public/secondary_forest_extent_amazonia_collection2_v1<br />
-ID: users/celsohlsj/public/secondary_forest_increment_amazonia_collection2_v1<br />
-ID: users/celsohlsj/public/secondary_forest_loss_amazonia_collection2_v1
