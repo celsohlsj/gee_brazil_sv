@@ -23,9 +23,9 @@ Silva Junior, C.H.L., Heinrich, V.H.A., Freire, A.T.G., Broggio, I.S., Rosan, T.
 #### The final data layers can also be accessed through the Toolkit Download by administrative boundaries (states and municipalities), watersheds, biomes, and protected areas: https://code.earthengine.google.com/13bfcedb77ac7bac9ea1fb962b587a54?hideCode=true
 
 #### Access to data asset in Google Earth Engine:
-###### Data asset for Brazil (v2) [MapBiomas Collection 4.1]
+###### Data asset v2 (MapBiomas Collection 4.1)
 ID: users/celsohlsj/public/secondary_forest_age_collection41_v2<br />
 ID: users/celsohlsj/public/secondary_forest_extent_collection41_v2<br />
 ID: users/celsohlsj/public/secondary_forest_increment_collection41_v2<br />
 ID: users/celsohlsj/public/secondary_forest_loss_collection41_v2
-###### Data asset for Brazil (v3) [MapBiomas Collection 5.0]
+###### Data asset v3 (MapBiomas Collection 5)
