@@ -32,3 +32,8 @@ ID: users/celsohlsj/public/secondary_forest_age_collection5_v3<br />
 ID: users/celsohlsj/public/secondary_forest_extent_collection5_v3<br />
 ID: users/celsohlsj/public/secondary_forest_increment_collection5_v3<br />
 ID: users/celsohlsj/public/secondary_forest_loss_collection5_v3
+###### Data asset v4 (MapBiomas Collection 6.0) [1986-2020]
+ID: users/celsohlsj/public/secondary_forest_age_collection6_v4<br />
+ID: users/celsohlsj/public/secondary_forest_extent_collection6_v4<br />
+ID: users/celsohlsj/public/secondary_forest_increment_collection6_v4<br />
+ID: users/celsohlsj/public/secondary_forest_loss_collection6_v4
