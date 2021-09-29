@@ -6,9 +6,9 @@
  *      Adapted from Mapbiomas User Toolkit Download - User vectores.
  *  
  * @author
- *      Original Author
- *      João Siqueira
- *      contato@mapbiomas.org
+ *      Original Author 
+ *      João Siqueira 
+ *      contato@mapbiomas.org 
  * 
  *      Adaptation
  *      Juan Doblas
