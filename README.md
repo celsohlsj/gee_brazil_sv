@@ -17,9 +17,9 @@ Silva Junior, C.H.L., Heinrich, V.H.A., Freire, A.T.G., Broggio, I.S., Rosan, T.
 #### Tiles structure of the dataset:
 <img src="https://drive.google.com/uc?export=view&id=1l_M7XnboV8dcwBfOxnianpdt9sV6Mcpv" width="600">
 
-#### The final data layers can be accessed from the Zenodo repository: https://doi.org/10.5281/zenodo.3928660
+#### The final data layers (v2) can be accessed from the Zenodo repository: https://doi.org/10.5281/zenodo.3928660
 
-#### The final data layers can also be accessed through the Toolkit Download by administrative boundaries (states and municipalities), watersheds, biomes, and protected areas: https://code.earthengine.google.com/13bfcedb77ac7bac9ea1fb962b587a54?hideCode=true
+#### The final data layers (v2) can also be accessed through the Toolkit Download by administrative boundaries (states and municipalities), watersheds, biomes, and protected areas: https://code.earthengine.google.com/13bfcedb77ac7bac9ea1fb962b587a54?hideCode=true
 
 #### Access to data asset in Google Earth Engine:
 ###### Data asset v2 (MapBiomas Collection 4.1) [1986-2018]
