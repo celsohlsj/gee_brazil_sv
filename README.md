@@ -42,3 +42,8 @@ ID: users/celsohlsj/public/secondary_forest_age_collection6_v4<br />
 ID: users/celsohlsj/public/secondary_forest_extent_collection6_v4<br />
 ID: users/celsohlsj/public/secondary_forest_increment_collection6_v4<br />
 ID: users/celsohlsj/public/secondary_forest_loss_collection6_v4
+###### Data asset Amazonia v2 (MapBiomas Collection 3.0) [1986-2020]
+ID: users/celsohlsj/public/secondary_forest_age_amazonia_collection3_v2<br />
+ID: users/celsohlsj/public/secondary_forest_extent_amazonia_collection3_v2<br />
+ID: users/celsohlsj/public/secondary_forest_increment_amazonia_collection3_v2<br />
+ID: users/celsohlsj/public/secondary_forest_loss_amazonia_collection3_v2
