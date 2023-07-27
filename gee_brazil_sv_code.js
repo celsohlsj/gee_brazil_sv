@@ -8,7 +8,7 @@
 
 // 0. MapBiomas Data (Colection 7.1)
 var brazil = ee.FeatureCollection("users/celsohlsj/brazil");
-var mapbiomas = ee.Image('projects/mapbiomas-workspace/public/collection7_1/mapbiomas_collection71_integration_v1').byte(); //MapBiomas Collection 5
+var mapbiomas = ee.Image('projects/mapbiomas-workspace/public/collection7_1/mapbiomas_collection71_integration_v1').byte();
 //Legend for MapBiomas: https://mapbiomas-br-site.s3.amazonaws.com/downloads/_EN__C%C3%B3digos_da_legenda_Cole%C3%A7%C3%A3o_7.pdf
 
 // 1. Reclassifying MapBiomas Data #Step 1
