@@ -22,6 +22,11 @@ Silva Junior, C.H.L., Heinrich, V.H.A., Freire, A.T.G., Broggio, I.S., Rosan, T.
 #### The final data layers (v2) can also be accessed through the Toolkit Download by administrative boundaries (states and municipalities), watersheds, biomes, and protected areas: https://code.earthengine.google.com/13bfcedb77ac7bac9ea1fb962b587a54?hideCode=true
 
 #### Access to data asset in Google Earth Engine:
+###### Data asset Brazil v6 (MapBiomas Collection 8) [1986-2022] [For all Native Vegetation of Brazil]
+ID: users/celsohlsj/public/secondary_vegetation_age_collection8_v6<br />
+ID: users/celsohlsj/public/secondary_vegetation_extent_collection8_v6<br />
+ID: users/celsohlsj/public/secondary_vegetation_increment_collection8_v6<br />
+ID: users/celsohlsj/public/secondary_vegetation_loss_collection8_v6
 ###### Data asset Brazil v5 (MapBiomas Collection 7.1) [1986-2021] [For all Native Vegetation of Brazil]
 ID: users/celsohlsj/public/secondary_vegetation_age_collection71_v5<br />
 ID: users/celsohlsj/public/secondary_vegetation_extent_collection71_v5<br />
