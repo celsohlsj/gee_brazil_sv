@@ -2,7 +2,7 @@
 // ******************************************************************************************
 //  * Institution:  National Institute for Space Research (INPE)
 //  * Purpose:      Map the increment, extent, age, and loss of secondary growth vegetation in Brazil.
-//  * Author:       Celso H. L. Silva Junior
+//  * Author:       Celso H. L. Silva-Junior
 //  * Email:        celsohlsj@gmail.com
 // ******************************************************************************************
 
