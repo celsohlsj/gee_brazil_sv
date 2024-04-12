@@ -9,9 +9,13 @@ The restoration and reforestation of 12 million hectares of forests by 2030 are 
 
 <img src="https://drive.google.com/uc?export=view&id=14V3whfA9IqoZIvs4SbOjiYszlNK8GVvZ" width="600">
 
-## Associated Publications:
-#### The maps are described in the following manuscript:
-Silva Junior, C.H.L., Heinrich, V.H.A., Freire, A.T.G., Broggio, I.S., Rosan, T.M., Doblas, J., Anderson, L.O., Rousseau, G.X., Shimabukuro, Y.E., Silva, C.A., House, J.I., Aragão, L.E.O.C. Benchmark maps of 33 years of secondary forest age for Brazil. Scientific Data (2020). https://doi.org/10.1038/s41597-020-00600-4
+## Associated Publication (method description):
+Silva-Junior, C.H.L., Heinrich, V.H.A., Freire, A.T.G., Broggio, I.S., Rosan, T.M., Doblas, J., Anderson, L.O., Rousseau, G.X., Shimabukuro, Y.E., Silva, C.A., House, J.I., Aragão, L.E.O.C. Benchmark maps of 33 years of secondary forest age for Brazil. Scientific Data (2020). https://doi.org/10.1038/s41597-020-00600-4
+
+## If you use the dataset, please cite the publications below:
+* Silva-Junior, C.H.L., Heinrich, V.H.A., Freire, A.T.G., Broggio, I.S., Rosan, T.M., Doblas, J., Anderson, L.O., Rousseau, G.X., Shimabukuro, Y.E., Silva, C.A., House, J.I., Aragão, L.E.O.C. Benchmark maps of 33 years of secondary forest age for Brazil. Scientific Data (2020). https://doi.org/10.1038/s41597-020-00600-4 [![Citation Badge](https://api.juleskreuer.eu/citation-badge.php?doi=10.1038/s41597-020-00600-4)](https://juleskreuer.eu/projekte/citation-badge/)
+* Heinrich, V.H., Dalagnol, R., Cassol, H.L., Rosan, T.M., Almeida, C.T., Silva-Junior, C.H.L., [...], Aragão, L.E.O.C. Large carbon sink potential of secondary forests in the Brazilian Amazon to mitigate climate change. Nature Communications (2021). https://doi.org/10.1038/s41467-021-22050-1 [![Citation Badge](https://api.juleskreuer.eu/citation-badge.php?doi=10.1038/s41467-021-22050-1)](https://juleskreuer.eu/projekte/citation-badge/)
+* Heinrich, V.H., Sitch, S., Rosan, T.M., Silva-Junior, C.H.L., Aragão, L.E.O.C. Large carbon sink potential of secondary forests in the Brazilian Amazon to mitigate climate change. Frontiers in Forests and Global Change (2023). https://doi.org/10.3389/ffgc.2023.1230734 [![Citation Badge](https://api.juleskreuer.eu/citation-badge.php?doi=10.3389/ffgc.2023.1230734)](https://juleskreuer.eu/projekte/citation-badge/)
 
 ## Funder and Support:
 * This mapping was funded by the National Council for Scientific and Technological Development - CNPq, Brazil, through the project "YBYRÁ-BR: Space-Time Quantification of CO2 Emissions and Removals by Brazilian Forests", Process CNPq 401741/2023-0 (from v61)
