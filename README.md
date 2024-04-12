@@ -19,7 +19,7 @@ Silva-Junior, C.H.L., Heinrich, V.H.A., Freire, A.T.G., Broggio, I.S., Rosan, T.
 
 ## Funder and Support:
 * This mapping was funded by the National Council for Scientific and Technological Development - CNPq, Brazil, through the project "YBYRÁ-BR: Space-Time Quantification of CO2 Emissions and Removals by Brazilian Forests", Process CNPq 401741/2023-0 (from v61)
-* This mapping was supported by the Coordination for the Improvement of Higher Education Personnel – CAPES, Brazil, Finance Code 001 (v2 to v5)
+* This mapping was supported by the Coordination for the Improvement of Higher Education Personnel - CAPES, Brazil, Finance Code 001 (v2 to v5)
 
 <img src="https://drive.google.com/uc?export=view&id=1Sy2kFD6TYUXMuCqPsDi0AaG2G2BwICIB" width="600">
 
