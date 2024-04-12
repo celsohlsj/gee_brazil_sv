@@ -1,6 +1,6 @@
 [![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.3928660.svg)](http://dx.doi.org/10.5281/zenodo.3928660)
 ![licence](https://img.shields.io/badge/Licence-GPL--3-blue.svg)
-![Github](https://img.shields.io/badge/Github-6.0.0-green.svg)
+![Github](https://img.shields.io/badge/Github-6.1.0-green.svg)
 
 # Benchmark maps of 33 years of secondary forest age for Brazil
 
@@ -12,6 +12,10 @@ The restoration and reforestation of 12 million hectares of forests by 2030 are 
 ## Associated Publications:
 #### The maps are described in the following manuscript:
 Silva Junior, C.H.L., Heinrich, V.H.A., Freire, A.T.G., Broggio, I.S., Rosan, T.M., Doblas, J., Anderson, L.O., Rousseau, G.X., Shimabukuro, Y.E., Silva, C.A., House, J.I., Aragão, L.E.O.C. Benchmark maps of 33 years of secondary forest age for Brazil. Scientific Data (2020). https://doi.org/10.1038/s41597-020-00600-4
+
+## Funder and Support:
+* This mapping was funded by the National Council for Scientific and Technological Development - CNPq, Brazil, through the project "YBYRÁ-BR: Space-Time Quantification of CO2 Emissions and Removals by Brazilian Forests - Process 401741/2023-0" (from v61)
+* This mapping was supported by the Coordination for the Improvement of Higher Education Personnel – CAPES, Brazil, Finance Code 001 (v2 to v5)
 
 ## Dataset access
 #### Tiles structure of the dataset:
