@@ -32,40 +32,42 @@ Silva-Junior, C.H.L., Heinrich, V.H.A., Freire, A.T.G., Broggio, I.S., Rosan, T.
 #### The final data layers (v2) can also be accessed through the Toolkit Download by administrative boundaries (states and municipalities), watersheds, biomes, and protected areas: https://code.earthengine.google.com/13bfcedb77ac7bac9ea1fb962b587a54?hideCode=true
 
 #### Access to data asset in Google Earth Engine:
-###### Data asset Brazil v61 (MapBiomas Collection 8) [1986-2022] [For all Native Vegetation of Brazil]
+###### Data Asset Brazil
+###### v61 (MapBiomas Collection 8) [1986-2022] [For all Native Vegetation of Brazil]
 ID: users/ybyrabr/public/secondary_vegetation_age_collection8_v61<br />
 ID: users/ybyrabr/public/secondary_vegetation_extent_collection8_v61<br />
 ID: users/ybyrabr/public/secondary_vegetation_increment_collection8_v61<br />
 ID: users/ybyrabr/public/secondary_vegetation_loss_collection8_v61
-###### Data asset Brazil v5 (MapBiomas Collection 7.1) [1986-2021] [For all Native Vegetation of Brazil]
+###### v5 (MapBiomas Collection 7.1) [1986-2021] [For all Native Vegetation of Brazil]
 ID: users/celsohlsj/public/secondary_vegetation_age_collection71_v5<br />
 ID: users/celsohlsj/public/secondary_vegetation_extent_collection71_v5<br />
 ID: users/celsohlsj/public/secondary_vegetation_increment_collection71_v5<br />
 ID: users/celsohlsj/public/secondary_vegetation_loss_collection71_v5
-###### Data asset Brazil v4 (MapBiomas Collection 6.0) [1986-2020]
+###### Data asset Brazil v4 (MapBiomas Collection 6.0) [1986-2020] [Only for the "Forest Formation" Class]
 ID: users/celsohlsj/public/secondary_forest_age_collection6_v4<br />
 ID: users/celsohlsj/public/secondary_forest_extent_collection6_v4<br />
 ID: users/celsohlsj/public/secondary_forest_increment_collection6_v4<br />
 ID: users/celsohlsj/public/secondary_forest_loss_collection6_v4
-###### Data asset Brazil v3 (MapBiomas Collection 5.0) [1986-2019]
+###### Data asset Brazil v3 (MapBiomas Collection 5.0) [1986-2019] [Only for the "Forest Formation" Class]
 ID: users/celsohlsj/public/secondary_forest_age_collection5_v3<br />
 ID: users/celsohlsj/public/secondary_forest_extent_collection5_v3<br />
 ID: users/celsohlsj/public/secondary_forest_increment_collection5_v3<br />
 ID: users/celsohlsj/public/secondary_forest_loss_collection5_v3
-###### Data asset Brazil v2 (MapBiomas Collection 4.1) [1986-2018]
+###### Data asset Brazil v2 (MapBiomas Collection 4.1) [1986-2018] [Only for the "Forest Formation" Class]
 ID: users/celsohlsj/public/secondary_forest_age_collection41_v2<br />
 ID: users/celsohlsj/public/secondary_forest_extent_collection41_v2<br />
 ID: users/celsohlsj/public/secondary_forest_increment_collection41_v2<br />
 ID: users/celsohlsj/public/secondary_forest_loss_collection41_v2
-###### Data asset Amazonia v1 (MapBiomas Collection 2.0) [1986-2018]
+
+###### Data Asset Amazonia
+###### v2 (MapBiomas Collection 3.0) [1986-2020] [Only for the "Forest Formation" Class]
+ID: users/celsohlsj/public/secondary_forest_age_amazonia_collection3_v2<br />
+ID: users/celsohlsj/public/secondary_forest_extent_amazonia_collection3_v2<br />
+ID: users/celsohlsj/public/secondary_forest_increment_amazonia_collection3_v2<br />
+ID: users/celsohlsj/public/secondary_forest_loss_amazonia_collection3_v2
+###### v1 (MapBiomas Collection 2.0) [1986-2018] [Only for the "Forest Formation" Class]
 ID: users/celsohlsj/public/secondary_forest_age_amazonia_collection2_v1<br />
 ID: users/celsohlsj/public/secondary_forest_extent_amazonia_collection2_v1<br />
 ID: users/celsohlsj/public/secondary_forest_increment_amazonia_collection2_v1<br />
 ID: users/celsohlsj/public/secondary_forest_loss_amazonia_collection2_v1
 
-
-###### Data asset Amazonia v2 (MapBiomas Collection 3.0) [1986-2020]
-ID: users/celsohlsj/public/secondary_forest_age_amazonia_collection3_v2<br />
-ID: users/celsohlsj/public/secondary_forest_extent_amazonia_collection3_v2<br />
-ID: users/celsohlsj/public/secondary_forest_increment_amazonia_collection3_v2<br />
-ID: users/celsohlsj/public/secondary_forest_loss_amazonia_collection3_v2
