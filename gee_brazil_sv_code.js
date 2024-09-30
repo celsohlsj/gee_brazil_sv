@@ -1,4 +1,4 @@
-// Brazilian Secondary Vegetation Mapping v61
+// Brazilian Secondary Vegetation Mapping v7
 // ******************************************************************************************
 //  * Institution:  National Institute for Space Research (INPE) / Amazon Environmental Research Institute (IPAM)
 //  * Purpose:      Map the increment, extent, age, and loss of secondary growth vegetation in Brazil
@@ -8,16 +8,16 @@
 
 // Configuration Variables
 var firstYear = 1985; // The first year of the data series
-var lastYear = 2022;  // The last year of the data series
+var lastYear = 2023;  // The last year of the data series
 var totalYears = lastYear - firstYear + 1;
-var mapbiomasCollection = 'collection8';  // MapBiomas data collection version
-var mappingVersion = 'v61';  // Version of the mapping process
+var mapbiomasCollection = 'collection9';  // MapBiomas data collection version
+var mappingVersion = 'v7';  // Version of the mapping process
 var assetFolder = 'users/ybyrabr/public';  // Destination folder for exported assets
 var brazil = ee.FeatureCollection("users/celsohlsj/brazil"); // Brazil's delimitation
 
-// 0. MapBiomas Data (Collection 8)
-// Legend for MapBiomas: https://brasil.mapbiomas.org/wp-content/uploads/sites/4/2023/08/Legenda-Colecao-8-LEGEND-CODE.pdf
-var mapbiomas = ee.Image('projects/mapbiomas-workspace/public/collection8/mapbiomas_collection80_integration_v1');
+// 0. MapBiomas Data (Collection 9)
+// Legend for MapBiomas: https://brasil.mapbiomas.org/wp-content/uploads/sites/4/2024/08/Legenda-Colecao-9-LEGEND-CODE.pdf
+var mapbiomas = ee.Image('projects/mapbiomas-public/assets/brazil/lulc/collection9/mapbiomas_collection90_integration_v1');
 
 // 1. Reclassifying MapBiomas Data #Step 1
 var empty = ee.Image().byte();
@@ -25,7 +25,7 @@ for (var i = 0; i < totalYears; i++)  {
     var y = firstYear + i;
     var year = 'classification_' + y;
     var forest = mapbiomas.select(year);
-    forest = forest.remap([1, 2, 3, 4, 5, 6, 49, 11, 12, 32, 50, 13], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 0); // All natural vegetation classes from MapBiomas
+    forest = forest.remap([3, 4, 5, 6, 49, 11, 12, 32, 50], [1, 1, 1, 1, 1, 1, 1, 1, 1], 0); // All natural vegetation classes from MapBiomas
     empty = empty.addBands(forest.rename(ee.String(year)));
 }
 var mapbiomas_forest = empty.select(empty.bandNames().slice(1));
