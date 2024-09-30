@@ -7,8 +7,8 @@
 // ******************************************************************************************
 
 // Configuration Variables
-var firstYear = 1985; // The first year of the data series
-var lastYear = 2023;  // The last year of the data series
+var firstYear = 1985; // The first year of the series
+var lastYear = 2023;  // The last year of the series
 var totalYears = lastYear - firstYear + 1;
 var mapbiomasCollection = 'collection9';  // MapBiomas data collection version
 var mappingVersion = 'v7';  // Version of the mapping process
