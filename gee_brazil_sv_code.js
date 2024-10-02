@@ -1,14 +1,15 @@
 // Brazilian Secondary Vegetation Mapping v7
 // ******************************************************************************************
 //  * Institution:  National Institute for Space Research (INPE) / Amazon Environmental Research Institute (IPAM)
+//  * Funder:       National Council for Scientific and Technological Development - CNPq (Process CNPq 401741/2023-0)
 //  * Purpose:      Map the increment, extent, age, and loss of secondary growth vegetation in Brazil
 //  * Author:       Celso H. L. Silva-Junior
 //  * Email:        celsohlsj@gmail.com
 // ******************************************************************************************
 
 // Configuration Variables
-var firstYear = 1985; // The first year of the series
-var lastYear = 2023;  // The last year of the series
+var firstYear = 1985; // The first year of the data series
+var lastYear = 2023;  // The last year of the data series
 var totalYears = lastYear - firstYear + 1;
 var mapbiomasCollection = 'collection9';  // MapBiomas data collection version
 var mappingVersion = 'v7';  // Version of the mapping process
@@ -61,7 +62,7 @@ var empty = ee.Image().byte();
 var ext = sforest_all.select('classification_1986');
 ext = ext.rename(ee.String('classification_1986'));
 empty = empty.addBands(ext);
-for (var i = 1; i < 37; i++)  {
+for (var i = 1; i < totalYears - 1; i++)  {
     var y = firstYear + 1 + i;
     var y2 = firstYear + i;
     var year = 'classification_' + y;
@@ -79,7 +80,7 @@ var empty2 = ee.Image().byte();
 var ext = sforest_all.select('classification_1986');
 ext = ext.rename(ee.String('classification_1986'));
 empty = empty.addBands(ext);
-for (var i = 1; i < 37; i++)  {
+for (var i = 1; i < totalYears - 1; i++)  {
     var y = firstYear + 1 + i;
     var y2 = firstYear + i;
     var year = 'classification_' + y;
@@ -101,7 +102,7 @@ age = age.rename(ee.String('classification_1986'));
 empty = empty.addBands(age);
 empty = empty.slice(1);
 var temp = empty;
-for (var i = 1; i < 37; i++)  {
+for (var i = 1; i < totalYears - 1; i++)  {
     var y = firstYear + 1 + i;
     var year = 'classification_' + y;
     var sforest = sforest_ext.select(year);
