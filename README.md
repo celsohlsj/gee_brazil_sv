@@ -33,6 +33,11 @@ Silva-Junior, C.H.L., Heinrich, V.H.A., Freire, A.T.G., Broggio, I.S., Rosan, T.
 
 #### Access to data asset in Google Earth Engine:
 ###### Data Asset Brazil
+###### v7.1 (MapBiomas Collection 9) [1986-2023] [For all Native Vegetation of Brazil]
+ID: users/ybyrabr/public/secondary_vegetation_age_collection9_v71<br />
+ID: users/ybyrabr/public/secondary_vegetation_extent_collection9_v71<br />
+ID: users/ybyrabr/public/secondary_vegetation_increment_collection9_v71<br />
+ID: users/ybyrabr/public/secondary_vegetation_loss_collection9_v71
 ###### v7 (MapBiomas Collection 9) [1986-2023] [For all Native Vegetation of Brazil]
 ID: users/ybyrabr/public/secondary_vegetation_age_collection9_v7<br />
 ID: users/ybyrabr/public/secondary_vegetation_extent_collection9_v7<br />
