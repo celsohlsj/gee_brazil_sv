@@ -26,6 +26,14 @@ var OilPalmExtent = ee.ImageCollection('projects/ee-globaloilpalm/assets/shared/
 		.unmask(0)
 		.eq(0)
 		.clip(brazil);
+		
+// Water Extent Mask drom MapBiomas
+var WaterExtent = mapbiomas
+                  .remap([33, 31], [1, 1], 0) // River, Lake and Ocean = 33; Aquaculture = 31
+                  .reduce(ee.Reducer.sum())
+                  .eq(0);
+                  
+Map.addLayer(WaterExtent, {min:0, max:38}, 'Soma das bandas');
 
 // 1. Reclassifying MapBiomas Data #Step 1
 var empty = ee.Image().byte();
@@ -35,6 +43,7 @@ for (var i = 0; i < totalYears; i++)  {
     var forest = mapbiomas.select(year);
     forest = forest.remap([3, 4, 5, 6, 49, 11, 12, 32, 50], [1, 1, 1, 1, 1, 1, 1, 1, 1], 0); // All natural vegetation classes from MapBiomas
     forest = forest.multiply(OilPalmExtent); // Excluding Oil Palm areas
+    forest = forest.multiply(WaterExtent); // Excluding Water areas
     empty = empty.addBands(forest.rename(ee.String(year)));
 }
 var mapbiomas_forest = empty.select(empty.bandNames().slice(1));
