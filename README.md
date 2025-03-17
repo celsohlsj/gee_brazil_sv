@@ -2,7 +2,7 @@
 ![licence](https://img.shields.io/badge/Licence-GPL--3-blue.svg)
 ![Github](https://img.shields.io/badge/Github-7.1.0-green.svg)
 
-# Benchmark maps of 33 years of secondary forest age for Brazil
+# Benchmark Maps of Secondary Growth Dynamics of Brazil’s Native Vegetation
 
 ## Background:
 The restoration and reforestation of 12 million hectares of native vegetation by 2030 are the leading mitigation strategies for reducing carbon emissions within the Brazilian Nationally Determined Contribution (NDC) targets assumed under the Paris Agreement. Understanding the dynamics of secondary growth native vegetation cover, which steeply decreased throughout Brazil, is essential for estimating the global carbon balance and quantifying the provision of ecosystem services. Knowing native secondary vegetation's long-term increment, extent, and age is crucial; however, these variables are poorly quantified. Here, we developed a 30-m spatial resolution dataset of Brazil's annual increment, extent, and age of secondary forests over the 1986–2023 period. Land-use and land-cover maps from the MapBiomas Project (https://brasil.mapbiomas.org/en/colecoes-mapbiomas) were used as input data for our algorithm, implemented in the Google Earth Engine platform. This dataset provides critical spatially explicit information for supporting carbon emissions reduction, biodiversity, and restoration policies, enabling environmental science applications, territorial planning, and subsidizing environmental law enforcement.
