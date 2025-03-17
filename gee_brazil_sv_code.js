@@ -32,8 +32,6 @@ var WaterExtent = mapbiomas
                   .remap([33, 31], [1, 1], 0) // River, Lake and Ocean = 33; Aquaculture = 31
                   .reduce(ee.Reducer.sum())
                   .eq(0);
-                  
-Map.addLayer(WaterExtent, {min:0, max:38}, 'Soma das bandas');
 
 // 1. Reclassifying MapBiomas Data #Step 1
 var empty = ee.Image().byte();
