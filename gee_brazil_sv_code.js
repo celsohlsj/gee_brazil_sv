@@ -12,13 +12,19 @@ var firstYear = 1985; // The first year of the data series
 var lastYear = 2023;  // The last year of the data series
 var totalYears = lastYear - firstYear + 1;
 var mapbiomasCollection = 'collection9';  // MapBiomas data collection version
-var mappingVersion = 'v7';  // Version of the mapping process
+var mappingVersion = 'v71';  // Version of the mapping process
 var assetFolder = 'users/ybyrabr/public';  // Destination folder for exported assets
 var brazil = ee.FeatureCollection("users/celsohlsj/brazil"); // Brazil's delimitation
 
 // 0. MapBiomas Data (Collection 9)
 // Legend for MapBiomas: https://brasil.mapbiomas.org/wp-content/uploads/sites/4/2024/08/Legenda-Colecao-9-LEGEND-CODE.pdf
 var mapbiomas = ee.Image('projects/mapbiomas-public/assets/brazil/lulc/collection9/mapbiomas_collection90_integration_v1');
+
+// Oil Palm Extent from Descals et al. (2024; https://doi.org/10.5194/essd-16-5111-2024) 
+var OilPalmExtent = ee.ImageCollection('projects/ee-globaloilpalm/assets/shared/GlobalOilPalm_extent_2021')
+		.mosaic()
+		.eq(0)
+		.clip(brazil);
 
 // 1. Reclassifying MapBiomas Data #Step 1
 var empty = ee.Image().byte();
@@ -27,6 +33,7 @@ for (var i = 0; i < totalYears; i++)  {
     var year = 'classification_' + y;
     var forest = mapbiomas.select(year);
     forest = forest.remap([3, 4, 5, 6, 49, 11, 12, 32, 50], [1, 1, 1, 1, 1, 1, 1, 1, 1], 0); // All natural vegetation classes from MapBiomas
+    forest = forest.multiply(OilPalmExtent); // Excluding Oil Palm areas
     empty = empty.addBands(forest.rename(ee.String(year)));
 }
 var mapbiomas_forest = empty.select(empty.bandNames().slice(1));
