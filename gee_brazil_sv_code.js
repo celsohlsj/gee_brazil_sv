@@ -23,6 +23,7 @@ var mapbiomas = ee.Image('projects/mapbiomas-public/assets/brazil/lulc/collectio
 // Oil Palm Extent from Descals et al. (2024; https://doi.org/10.5194/essd-16-5111-2024) 
 var OilPalmExtent = ee.ImageCollection('projects/ee-globaloilpalm/assets/shared/GlobalOilPalm_extent_2021')
 		.mosaic()
+		.unmask(0)
 		.eq(0)
 		.clip(brazil);
 
