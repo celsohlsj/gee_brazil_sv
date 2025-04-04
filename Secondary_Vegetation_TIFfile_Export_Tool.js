@@ -1,5 +1,5 @@
 // Configuration variables
-var collection = 'collection9';         // Collection name
+var collection = 'collection9';         // Brazil's MapBiomas Collection name
 var mappingVersion = 'v71';               // Mapping version
 var lastYear = 2023;                      // Last year to export
 var startYear = 1986;                     // Start year for age, extent, and increment datasets
