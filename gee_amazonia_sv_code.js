@@ -1,4 +1,4 @@
-// Brazilian Secondary Vegetation Mapping v7
+// Amazonia Secondary Vegetation Mapping v3
 // ******************************************************************************************
 //  * Institution:  National Institute for Space Research (INPE) / Amazon Environmental Research Institute (IPAM)
 //  * Funder:       National Council for Scientific and Technological Development - CNPq (Process CNPq 401741/2023-0)
@@ -11,25 +11,25 @@
 var firstYear = 1985; // The first year of the data series
 var lastYear = 2023;  // The last year of the data series
 var totalYears = lastYear - firstYear + 1;
-var mapbiomasCollection = 'collection9';  // MapBiomas data collection version
-var mappingVersion = 'v72';  // Version of the mapping process
+var mapbiomasCollection = 'collection6';  // MapBiomas data collection version
+var mappingVersion = 'v3';  // Version of the mapping process
 var assetFolder = 'users/ybyrabr/public';  // Destination folder for exported assets
-var brazil = ee.FeatureCollection("users/celsohlsj/brazil"); // Brazil's delimitation
 
-// 0. MapBiomas Data (Collection 9)
-// Legend for MapBiomas: https://brasil.mapbiomas.org/wp-content/uploads/sites/4/2024/08/Legenda-Colecao-9-LEGEND-CODE.pdf
+// 0. MapBiomas Data (Collection 6)
+// Legend for MapBiomas: https://amazonia.mapbiomas.org/wp-content/uploads/sites/10/2025/01/Leyenda_Coleccion6.pdf
 var mapbiomas = ee.Image('projects/mapbiomas-public/assets/brazil/lulc/collection9/mapbiomas_collection90_integration_v1');
+var aoi = mapbiomas.geometry().bounds(); // Amazonia delimitation
 
 // Oil Palm Extent from Descals et al. (2024; https://doi.org/10.5194/essd-16-5111-2024) 
 var OilPalmExtent = ee.ImageCollection('projects/ee-globaloilpalm/assets/shared/GlobalOilPalm_extent_2021')
 		.mosaic()
 		.unmask(0)
 		.eq(0)
-		.clip(brazil);
+		.clip(aoi);
 		
 // Water Extent Mask drom MapBiomas
 var WaterExtent = mapbiomas
-                  .remap([33, 31], [1, 1], 0) // River, Lake and Ocean = 33; Aquaculture = 31
+                  .remap([33, 34], [1, 1], 0) // River, lake and ocean = 33; Glacier = 34
                   .reduce(ee.Reducer.sum())
                   .eq(0);
 
@@ -39,8 +39,8 @@ for (var i = 0; i < totalYears; i++)  {
     var y = firstYear + i;
     var year = 'classification_' + y;
     var forest = mapbiomas.select(year);
-    forest = forest.remap([3], [1], 0); // Forest Formation class from MapBiomas Brazil
-    //forest = forest.remap([3, 4, 5, 6, 49, 11, 12, 32, 50], [1, 1, 1, 1, 1, 1, 1, 1, 1], 0); // All natural vegetation classes from MapBiomas Brazil
+    forest = forest.remap([3, 6], [1, 1], 0); // Forest Formation class from MapBiomas Brazil
+    //forest = forest.remap([3, 4, 5, 6, 11, 12, 13], [1, 1, 1, 1, 1, 1, 1], 0); // All natural vegetation classes from MapBiomas Amazonia
     forest = forest.multiply(OilPalmExtent); // Excluding Oil Palm areas
     forest = forest.multiply(WaterExtent); // Excluding Water areas
     empty = empty.addBands(forest.rename(ee.String(year)));
@@ -52,7 +52,7 @@ var empty = ee.Image().byte();
 for (var i = 0; i < totalYears; i++)  {
     var y = firstYear + i;
     var year = 'classification_' + y;
-    var anthropic = mapbiomas.select(year).remap([15, 19, 39, 20, 40, 62, 41, 46, 47, 35, 48, 9, 21], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 0).rename(ee.String(year));
+    var anthropic = mapbiomas.select(year).remap([15, 18, 9, 35, 21, 24, 30, 25], [1, 1, 1, 1, 1, 1, 1, 1], 0).rename(ee.String(year));
     empty = empty.addBands(anthropic);
 }
 var anthropic_mask = empty.select(empty.bandNames().slice(1));
@@ -133,36 +133,36 @@ var sforest_age = temp;
 // Export Products Data to Asset
 Export.image.toAsset({
     image: sforest_all,
-    description: 'secondary_vegetation_increment_'  + mapbiomasCollection + '_' + mappingVersion,
-    assetId: assetFolder + '/secondary_vegetation_increment_' + mapbiomasCollection + '_' + mappingVersion,
+    description: 'secondary_vegetation_increment_amazonia_'  + mapbiomasCollection + '_' + mappingVersion,
+    assetId: assetFolder + '/secondary_vegetation_increment_amazonia_' + mapbiomasCollection + '_' + mappingVersion,
     scale: 30,
-    region: brazil,
+    region: aoi,
     maxPixels: 1e13
 });
 
 Export.image.toAsset({
     image: sforest_ext,
-    description: 'secondary_vegetation_extent_' + mapbiomasCollection + '_' + mappingVersion,
-    assetId: assetFolder + '/secondary_vegetation_extent_' + mapbiomasCollection + '_' + mappingVersion,
+    description: 'secondary_vegetation_extent_amazonia_' + mapbiomasCollection + '_' + mappingVersion,
+    assetId: assetFolder + '/secondary_vegetation_extent_amazonia_' + mapbiomasCollection + '_' + mappingVersion,
     scale: 30,
-    region: brazil,
+    region: aoi,
     maxPixels: 1e13
 });
 
 Export.image.toAsset({
     image: sforest_age,
-    description: 'secondary_vegetation_age_' + mapbiomasCollection + '_' + mappingVersion,
-    assetId: assetFolder + '/secondary_vegetation_age_' + mapbiomasCollection + '_' + mappingVersion,
+    description: 'secondary_vegetation_age_amazonia_' + mapbiomasCollection + '_' + mappingVersion,
+    assetId: assetFolder + '/secondary_vegetation_age_amazonia_' + mapbiomasCollection + '_' + mappingVersion,
     scale: 30,
-    region: brazil,
+    region: aoi,
     maxPixels: 1e13
 });
 
 Export.image.toAsset({
     image: sforest_loss,
-    description: 'secondary_vegetation_loss_' + mapbiomasCollection + '_' + mappingVersion,
-    assetId: assetFolder + '/secondary_vegetation_loss_' + mapbiomasCollection + '_' + mappingVersion,
+    description: 'secondary_vegetation_loss_amazonia_' + mapbiomasCollection + '_' + mappingVersion,
+    assetId: assetFolder + '/secondary_vegetation_loss_amazonia_' + mapbiomasCollection + '_' + mappingVersion,
     scale: 30,
-    region: brazil,
+    region: aoi,
     maxPixels: 1e13
 });
