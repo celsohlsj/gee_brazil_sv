@@ -1,6 +1,6 @@
 [![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.3928660.svg)](http://dx.doi.org/10.5281/zenodo.3928660)
 ![licence](https://img.shields.io/badge/Licence-GPL--3-blue.svg)
-![Github](https://img.shields.io/badge/Github-7.1.0-green.svg)
+![Github](https://img.shields.io/badge/Github-7.2.0-green.svg)
 
 # Benchmark Maps of Secondary Growth Dynamics of Brazil’s Native Vegetation
 
@@ -33,6 +33,11 @@ Silva-Junior, C.H.L., Heinrich, V.H.A., Freire, A.T.G., Broggio, I.S., Rosan, T.
 
 #### Access to data asset in Google Earth Engine:
 ###### Data Asset Brazil
+###### v7.2 (MapBiomas Collection 9) [1986-2023] [Only for the "Forest Formation" Class]
+ID: users/ybyrabr/public/secondary_vegetation_age_collection9_v71<br />
+ID: users/ybyrabr/public/secondary_vegetation_extent_collection9_v71<br />
+ID: users/ybyrabr/public/secondary_vegetation_increment_collection9_v71<br />
+ID: users/ybyrabr/public/secondary_vegetation_loss_collection9_v71
 ###### v7.1 (MapBiomas Collection 9) [1986-2023] [For all Native Vegetation of Brazil]
 ID: users/ybyrabr/public/secondary_vegetation_age_collection9_v71<br />
 ID: users/ybyrabr/public/secondary_vegetation_extent_collection9_v71<br />
@@ -70,6 +75,11 @@ ID: users/celsohlsj/public/secondary_forest_increment_collection41_v2<br />
 ID: users/celsohlsj/public/secondary_forest_loss_collection41_v2
 
 ###### Data Asset Amazonia
+###### v3 (MapBiomas Collection 6.0) [1986-2023] [Only for the "Forest Formation" Class]
+ID: users/celsohlsj/public/secondary_forest_age_amazonia_collection6_v6<br />
+ID: users/celsohlsj/public/secondary_forest_extent_amazonia_collection6_v6<br />
+ID: users/celsohlsj/public/secondary_forest_increment_amazonia_collection6_v6<br />
+ID: users/celsohlsj/public/secondary_forest_loss_amazonia_collection6_v6
 ###### v2 (MapBiomas Collection 3.0) [1986-2020] [Only for the "Forest Formation" Class]
 ID: users/celsohlsj/public/secondary_forest_age_amazonia_collection3_v2<br />
 ID: users/celsohlsj/public/secondary_forest_extent_amazonia_collection3_v2<br />
