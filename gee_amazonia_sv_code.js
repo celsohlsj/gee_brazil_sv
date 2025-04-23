@@ -17,7 +17,7 @@ var assetFolder = 'users/ybyrabr/public';  // Destination folder for exported as
 
 // 0. MapBiomas Data (Collection 6)
 // Legend for MapBiomas: https://amazonia.mapbiomas.org/wp-content/uploads/sites/10/2025/01/Leyenda_Coleccion6.pdf
-var mapbiomas = ee.Image('projects/mapbiomas-public/assets/brazil/lulc/collection9/mapbiomas_collection90_integration_v1');
+var mapbiomas = ee.Image('projects/mapbiomas-public/assets/amazon/lulc/collection6/mapbiomas_collection60_integration_v1');
 var aoi = mapbiomas.geometry().bounds(); // Amazonia delimitation
 
 // Oil Palm Extent from Descals et al. (2024; https://doi.org/10.5194/essd-16-5111-2024) 
@@ -27,7 +27,7 @@ var OilPalmExtent = ee.ImageCollection('projects/ee-globaloilpalm/assets/shared/
 		.eq(0)
 		.clip(aoi);
 		
-// Water Extent Mask drom MapBiomas
+// Water Extent Mask from MapBiomas
 var WaterExtent = mapbiomas
                   .remap([33, 34], [1, 1], 0) // River, lake and ocean = 33; Glacier = 34
                   .reduce(ee.Reducer.sum())
@@ -39,7 +39,7 @@ for (var i = 0; i < totalYears; i++)  {
     var y = firstYear + i;
     var year = 'classification_' + y;
     var forest = mapbiomas.select(year);
-    forest = forest.remap([3, 6], [1, 1], 0); // Forest Formation class from MapBiomas Brazil
+    forest = forest.remap([3, 6], [1, 1], 0); // Forest Formation classes from MapBiomas Brazil
     //forest = forest.remap([3, 4, 5, 6, 11, 12, 13], [1, 1, 1, 1, 1, 1, 1], 0); // All natural vegetation classes from MapBiomas Amazonia
     forest = forest.multiply(OilPalmExtent); // Excluding Oil Palm areas
     forest = forest.multiply(WaterExtent); // Excluding Water areas
@@ -133,8 +133,8 @@ var sforest_age = temp;
 // Export Products Data to Asset
 Export.image.toAsset({
     image: sforest_all,
-    description: 'secondary_vegetation_increment_amazonia_'  + mapbiomasCollection + '_' + mappingVersion,
-    assetId: assetFolder + '/secondary_vegetation_increment_amazonia_' + mapbiomasCollection + '_' + mappingVersion,
+    description: 'secondary_forest_increment_amazonia_'  + mapbiomasCollection + '_' + mappingVersion,
+    assetId: assetFolder + '/secondary_forest_increment_amazonia_' + mapbiomasCollection + '_' + mappingVersion,
     scale: 30,
     region: aoi,
     maxPixels: 1e13
@@ -142,8 +142,8 @@ Export.image.toAsset({
 
 Export.image.toAsset({
     image: sforest_ext,
-    description: 'secondary_vegetation_extent_amazonia_' + mapbiomasCollection + '_' + mappingVersion,
-    assetId: assetFolder + '/secondary_vegetation_extent_amazonia_' + mapbiomasCollection + '_' + mappingVersion,
+    description: 'secondary_forest_extent_amazonia_' + mapbiomasCollection + '_' + mappingVersion,
+    assetId: assetFolder + '/secondary_forest_extent_amazonia_' + mapbiomasCollection + '_' + mappingVersion,
     scale: 30,
     region: aoi,
     maxPixels: 1e13
@@ -151,8 +151,8 @@ Export.image.toAsset({
 
 Export.image.toAsset({
     image: sforest_age,
-    description: 'secondary_vegetation_age_amazonia_' + mapbiomasCollection + '_' + mappingVersion,
-    assetId: assetFolder + '/secondary_vegetation_age_amazonia_' + mapbiomasCollection + '_' + mappingVersion,
+    description: 'secondary_forest_age_amazonia_' + mapbiomasCollection + '_' + mappingVersion,
+    assetId: assetFolder + '/secondary_forest_age_amazonia_' + mapbiomasCollection + '_' + mappingVersion,
     scale: 30,
     region: aoi,
     maxPixels: 1e13
@@ -160,8 +160,8 @@ Export.image.toAsset({
 
 Export.image.toAsset({
     image: sforest_loss,
-    description: 'secondary_vegetation_loss_amazonia_' + mapbiomasCollection + '_' + mappingVersion,
-    assetId: assetFolder + '/secondary_vegetation_loss_amazonia_' + mapbiomasCollection + '_' + mappingVersion,
+    description: 'secondary_forest_loss_amazonia_' + mapbiomasCollection + '_' + mappingVersion,
+    assetId: assetFolder + '/secondary_forest_loss_amazonia_' + mapbiomasCollection + '_' + mappingVersion,
     scale: 30,
     region: aoi,
     maxPixels: 1e13
