@@ -39,7 +39,7 @@ for (var i = 0; i < totalYears; i++)  {
     var y = firstYear + i;
     var year = 'classification_' + y;
     var forest = mapbiomas.select(year);
-    forest = forest.remap([3], [1], 0); // Forest Formation class from MapBiomas Brazil
+    forest = forest.remap([3, 6], [1, 1], 0); // Forest Formation classes from MapBiomas Brazil
     //forest = forest.remap([3, 4, 5, 6, 49, 11, 12, 32, 50], [1, 1, 1, 1, 1, 1, 1, 1, 1], 0); // All natural vegetation classes from MapBiomas Brazil
     forest = forest.multiply(OilPalmExtent); // Excluding Oil Palm areas
     forest = forest.multiply(WaterExtent); // Excluding Water areas
@@ -134,7 +134,7 @@ var sforest_age = temp;
 Export.image.toAsset({
     image: sforest_all,
     description: 'secondary_vegetation_increment_'  + mapbiomasCollection + '_' + mappingVersion,
-    assetId: assetFolder + '/secondary_vegetation_increment_' + mapbiomasCollection + '_' + mappingVersion,
+    assetId: assetFolder + '/secondary_forest_increment_' + mapbiomasCollection + '_' + mappingVersion,
     scale: 30,
     region: brazil,
     maxPixels: 1e13
@@ -143,7 +143,7 @@ Export.image.toAsset({
 Export.image.toAsset({
     image: sforest_ext,
     description: 'secondary_vegetation_extent_' + mapbiomasCollection + '_' + mappingVersion,
-    assetId: assetFolder + '/secondary_vegetation_extent_' + mapbiomasCollection + '_' + mappingVersion,
+    assetId: assetFolder + '/secondary_forest_extent_' + mapbiomasCollection + '_' + mappingVersion,
     scale: 30,
     region: brazil,
     maxPixels: 1e13
@@ -152,7 +152,7 @@ Export.image.toAsset({
 Export.image.toAsset({
     image: sforest_age,
     description: 'secondary_vegetation_age_' + mapbiomasCollection + '_' + mappingVersion,
-    assetId: assetFolder + '/secondary_vegetation_age_' + mapbiomasCollection + '_' + mappingVersion,
+    assetId: assetFolder + '/secondary_forest_age_' + mapbiomasCollection + '_' + mappingVersion,
     scale: 30,
     region: brazil,
     maxPixels: 1e13
@@ -161,7 +161,7 @@ Export.image.toAsset({
 Export.image.toAsset({
     image: sforest_loss,
     description: 'secondary_vegetation_loss_' + mapbiomasCollection + '_' + mappingVersion,
-    assetId: assetFolder + '/secondary_vegetation_loss_' + mapbiomasCollection + '_' + mappingVersion,
+    assetId: assetFolder + '/secondary_forest_loss_' + mapbiomasCollection + '_' + mappingVersion,
     scale: 30,
     region: brazil,
     maxPixels: 1e13
