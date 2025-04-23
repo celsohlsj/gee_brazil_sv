@@ -133,7 +133,7 @@ var sforest_age = temp;
 // Export Products Data to Asset
 Export.image.toAsset({
     image: sforest_all,
-    description: 'secondary_vegetation_increment_'  + mapbiomasCollection + '_' + mappingVersion,
+    description: 'secondary_forest_increment_'  + mapbiomasCollection + '_' + mappingVersion,
     assetId: assetFolder + '/secondary_forest_increment_' + mapbiomasCollection + '_' + mappingVersion,
     scale: 30,
     region: brazil,
@@ -142,7 +142,7 @@ Export.image.toAsset({
 
 Export.image.toAsset({
     image: sforest_ext,
-    description: 'secondary_vegetation_extent_' + mapbiomasCollection + '_' + mappingVersion,
+    description: 'secondary_forest_extent_' + mapbiomasCollection + '_' + mappingVersion,
     assetId: assetFolder + '/secondary_forest_extent_' + mapbiomasCollection + '_' + mappingVersion,
     scale: 30,
     region: brazil,
@@ -151,7 +151,7 @@ Export.image.toAsset({
 
 Export.image.toAsset({
     image: sforest_age,
-    description: 'secondary_vegetation_age_' + mapbiomasCollection + '_' + mappingVersion,
+    description: 'secondary_forest_age_' + mapbiomasCollection + '_' + mappingVersion,
     assetId: assetFolder + '/secondary_forest_age_' + mapbiomasCollection + '_' + mappingVersion,
     scale: 30,
     region: brazil,
@@ -160,7 +160,7 @@ Export.image.toAsset({
 
 Export.image.toAsset({
     image: sforest_loss,
-    description: 'secondary_vegetation_loss_' + mapbiomasCollection + '_' + mappingVersion,
+    description: 'secondary_forest_loss_' + mapbiomasCollection + '_' + mappingVersion,
     assetId: assetFolder + '/secondary_forest_loss_' + mapbiomasCollection + '_' + mappingVersion,
     scale: 30,
     region: brazil,
