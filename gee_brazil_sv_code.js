@@ -1,4 +1,4 @@
-// Brazilian Secondary Vegetation Mapping v7
+// Brazilian Secondary Vegetation Mapping v8
 // ******************************************************************************************
 //  * Institution:  National Institute for Space Research (INPE) / Amazon Environmental Research Institute (IPAM)
 //  * Funder:       National Council for Scientific and Technological Development - CNPq (Process CNPq 401741/2023-0)
@@ -9,16 +9,16 @@
 
 // Configuration Variables
 var firstYear = 1985; // The first year of the data series
-var lastYear = 2023;  // The last year of the data series
+var lastYear = 2024;  // The last year of the data series
 var totalYears = lastYear - firstYear + 1;
-var mapbiomasCollection = 'collection9';  // MapBiomas data collection version
-var mappingVersion = 'v72';  // Version of the mapping process
+var mapbiomasCollection = 'collection10';  // MapBiomas data collection version
+var mappingVersion = 'v8';  // Version of the mapping process
 var assetFolder = 'users/ybyrabr/public';  // Destination folder for exported assets
 var brazil = ee.FeatureCollection("users/celsohlsj/brazil"); // Brazil's delimitation
 
-// 0. MapBiomas Data (Collection 9)
-// Legend for MapBiomas: https://brasil.mapbiomas.org/wp-content/uploads/sites/4/2024/08/Legenda-Colecao-9-LEGEND-CODE.pdf
-var mapbiomas = ee.Image('projects/mapbiomas-public/assets/brazil/lulc/collection9/mapbiomas_collection90_integration_v1');
+// 0. MapBiomas Data (Collection 10)
+// Legend for MapBiomas: https://brasil.mapbiomas.org/wp-content/uploads/sites/4/2025/08/Legenda-Colecao-10-Legend-Code.pdf
+var mapbiomas = ee.Image('projects/mapbiomas-public/assets/brazil/lulc/collection10/mapbiomas_collection10_integration_v1');
 
 // Oil Palm Extent from Descals et al. (2024; https://doi.org/10.5194/essd-16-5111-2024) 
 var OilPalmExtent = ee.ImageCollection('projects/ee-globaloilpalm/assets/shared/GlobalOilPalm_extent_2021')
@@ -52,7 +52,7 @@ var empty = ee.Image().byte();
 for (var i = 0; i < totalYears; i++)  {
     var y = firstYear + i;
     var year = 'classification_' + y;
-    var anthropic = mapbiomas.select(year).remap([15, 19, 39, 20, 40, 62, 41, 46, 47, 35, 48, 9, 21], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 0).rename(ee.String(year));
+    var anthropic = mapbiomas.select(year).remap([15, 19, 39, 20, 40, 62, 41, 46, 47, 35, 48, 9, 21, 24, 30], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 0).rename(ee.String(year));
     empty = empty.addBands(anthropic);
 }
 var anthropic_mask = empty.select(empty.bandNames().slice(1));
