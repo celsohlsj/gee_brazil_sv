@@ -33,6 +33,11 @@ Silva-Junior, C.H.L., Heinrich, V.H.A., Freire, A.T.G., Broggio, I.S., Rosan, T.
 
 #### Access to data asset in Google Earth Engine:
 ###### Data Asset Brazil
+###### v8 (MapBiomas Collection 10) [1986-2024] [Only for the "Forest Formation" Class]
+ID: users/ybyrabr/public/secondary_forest_age_collection10_v8<br />
+ID: users/ybyrabr/public/secondary_forest_extent_collection10_v8<br />
+ID: users/ybyrabr/public/secondary_forest_increment_collection10_v8<br />
+ID: users/ybyrabr/public/secondary_forest_loss_collection10_v8
 ###### v7.2 (MapBiomas Collection 9) [1986-2023] [Only for the "Forest Formation" Class]
 ID: users/ybyrabr/public/secondary_forest_age_collection9_v72<br />
 ID: users/ybyrabr/public/secondary_forest_extent_collection9_v72<br />
