@@ -1,6 +1,6 @@
 [![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.3928660.svg)](http://dx.doi.org/10.5281/zenodo.3928660)
 ![licence](https://img.shields.io/badge/Licence-GPL--3-blue.svg)
-![Github](https://img.shields.io/badge/Github-7.2.0-green.svg)
+![Github](https://img.shields.io/badge/Github-8.0.0-green.svg)
 
 # Benchmark Maps of Secondary Growth Dynamics of Brazil’s Native Vegetation
 
