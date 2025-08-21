@@ -27,7 +27,7 @@ var OilPalmExtent = ee.ImageCollection('projects/ee-globaloilpalm/assets/shared/
 		.eq(0)
 		.clip(brazil);
 		
-// Water Extent Mask drom MapBiomas
+// Water Extent Mask from MapBiomas
 var WaterExtent = mapbiomas
                   .remap([33, 31], [1, 1], 0) // River, Lake and Ocean = 33; Aquaculture = 31
                   .reduce(ee.Reducer.sum())
