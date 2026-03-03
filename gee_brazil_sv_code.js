@@ -11,14 +11,14 @@
 var firstYear = 1985; // The first year of the data series
 var lastYear = 2024;  // The last year of the data series
 var totalYears = lastYear - firstYear + 1;
-var mapbiomasCollection = 'collection10';  // MapBiomas data collection version
-var mappingVersion = 'v8';  // Version of the mapping process
+var mapbiomasCollection = 'collection10_1';  // MapBiomas data collection version
+var mappingVersion = 'v8_1';  // Version of the mapping process
 var assetFolder = 'users/ybyrabr/public';  // Destination folder for exported assets
 var brazil = ee.FeatureCollection("users/celsohlsj/brazil"); // Brazil's delimitation
 
-// 0. MapBiomas Data (Collection 10)
+// 0. MapBiomas Data (Collection 10.1)
 // Legend for MapBiomas: https://brasil.mapbiomas.org/wp-content/uploads/sites/4/2025/08/Legenda-Colecao-10-Legend-Code.pdf
-var mapbiomas = ee.Image('projects/mapbiomas-public/assets/brazil/lulc/collection10/mapbiomas_brazil_collection10_coverage_v2');
+var mapbiomas = ee.Image('projects/mapbiomas-public/assets/brazil/lulc/collection10_1/mapbiomas_brazil_collection10_1_coverage_v1');
 
 // Oil Palm Extent from Descals et al. (2024; https://doi.org/10.5194/essd-16-5111-2024) 
 var OilPalmExtent = ee.ImageCollection('projects/ee-globaloilpalm/assets/shared/GlobalOilPalm_extent_2021')
