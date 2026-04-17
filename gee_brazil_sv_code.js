@@ -1,4 +1,4 @@
-// Brazilian Secondary Vegetation Mapping v8
+// Brazilian Secondary Vegetation Mapping v8.1
 // ******************************************************************************************
 //  * Institution:  National Institute for Space Research (INPE) / Amazon Environmental Research Institute (IPAM)
 //  * Funder:       National Council for Scientific and Technological Development - CNPq (Process CNPq 401741/2023-0)
