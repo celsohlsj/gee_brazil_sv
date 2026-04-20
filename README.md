@@ -46,17 +46,7 @@ Land-use and land-cover maps from the [MapBiomas Project](https://brasil.mapbiom
 
 <img src="https://drive.google.com/uc?export=view&id=14V3whfA9IqoZIvs4SbOjiYszlNK8GVvZ" width="700">
 
-**Figure 1.** Spatial distribution of secondary vegetation age across Brazil (1986–2024), derived from MapBiomas Collection 10.1. Warmer colors indicate younger secondary vegetation; cooler colors indicate older secondary vegetation.
-
-</div>
-
-<br/>
-
-<div align="center">
-
-<img src="https://drive.google.com/uc?export=view&id=1Sy2kFD6TYUXMuCqPsDi0AaG2G2BwICIB" width="700">
-
-**Figure 2.** Temporal dynamics of secondary vegetation in Brazil, showing annual increment and cumulative extent from 1986 to 2024.
+**Figure 1.** Conceptual diagram of the land-use dynamics underlying the secondary vegetation mapping algorithm. Old-growth forest (1985) is cleared by fire and converted to agriculture and livestock. Abandoned land undergoes early succession, developing into secondary forest. A second deforestation cycle (2018) illustrates the recurrent nature of secondary vegetation dynamics detected annually from the MapBiomas land-cover time series.
 
 </div>
 
@@ -299,6 +289,12 @@ If you use this code or data, please cite:
 
 - This mapping was funded by the **National Council for Scientific and Technological Development — CNPq**, Brazil, through the project *"YBYRÁ-BR: Space-Time Quantification of CO₂ Emissions and Removals by Brazilian Forests"*, Process CNPq **401741/2023-0** (from v6.1)
 - This mapping was supported by the **Coordination for the Improvement of Higher Education Personnel — CAPES**, Brazil, Finance Code 001 (v2 to v5)
+
+<div align="center">
+
+<img src="https://drive.google.com/uc?export=view&id=1Sy2kFD6TYUXMuCqPsDi0AaG2G2BwICIB" width="600">
+
+</div>
 
 ---
 
