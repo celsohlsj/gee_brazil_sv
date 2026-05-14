@@ -44,9 +44,9 @@ Land-use and land-cover maps from the [MapBiomas Project](https://brasil.mapbiom
 
 <div align="center">
 
-<img src="https://drive.google.com/uc?export=view&id=14V3whfA9IqoZIvs4SbOjiYszlNK8GVvZ" width="700">
+<img src="https://drive.google.com/uc?export=view&id=10Pr_WUmN7STOEcnRuHW-HWLzEu5ujnQq" width="700">
 
-**Figure 1.** Conceptual diagram of the land-use dynamics underlying the secondary vegetation mapping algorithm. Old-growth forest (1985) is cleared by fire and converted to agriculture and livestock. Abandoned land undergoes early succession, developing into secondary forest. A second deforestation cycle (2018) illustrates the recurrent nature of secondary vegetation dynamics detected annually from the MapBiomas land-cover time series.
+**Figure 1.** Alternative trajectories of tropical forest conversion and regeneration through time. (**1**) Old-growth forest. (**2**) Forest conversion by fire followed by post-clearing residue removal. (**3**) Agriculture and livestock established after forest conversion, with adjacent land abandonment. (**4**) Agriculture and livestock, alongside early successional regrowth on abandoned land. (**5**) Agriculture and livestock, alongside secondary forest regeneration. (**6**) Agriculture and livestock, followed by renewed deforestation.
 
 </div>
 
