@@ -2,10 +2,10 @@
 
 [![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.3928660.svg)](http://dx.doi.org/10.5281/zenodo.3928660)
 ![Licence](https://img.shields.io/badge/Licence-CC%20BY%204.0-blue.svg)
-![Version](https://img.shields.io/badge/Version-8.1.0-green.svg)
+![Version](https://img.shields.io/badge/Version-9.0.0-green.svg)
 ![Platform](https://img.shields.io/badge/Platform-Google%20Earth%20Engine-4285F4?logo=google&logoColor=white)
 ![Language](https://img.shields.io/badge/Language-JavaScript-f7df1e?logo=javascript&logoColor=black)
-![Period](https://img.shields.io/badge/Analysis%20Period-1986–2024-orange)
+![Period](https://img.shields.io/badge/Analysis%20Period-1986–2025-orange)
 [![Citation Badge](https://api.juleskreuer.eu/citation-badge.php?doi=10.1038/s41597-020-00600-4)](https://juleskreuer.eu/projekte/citation-badge/)
 
 <br/>
@@ -27,9 +27,9 @@
 
 ## 🌎 Overview
 
-This repository provides the complete **Google Earth Engine (GEE)** pipeline for mapping the annual increment, extent, age, and loss of secondary vegetation across **Brazil** and **Amazonia** at **30-meter spatial resolution** for the period **1986–2024**.
+This repository provides the complete **Google Earth Engine (GEE)** pipeline for mapping the annual increment, extent, age, and loss of secondary vegetation across **Brazil** and **Amazonia** at **30-meter spatial resolution** for the period **1986–2025**.
 
-Land-use and land-cover maps from the [MapBiomas Project](https://brasil.mapbiomas.org/en/colecoes-mapbiomas) (Collection 10.1) are used as input data. The algorithm identifies secondary vegetation by detecting transitions from anthropic land use back to native vegetation classes in the MapBiomas annual time series. This dataset provides critical spatially explicit information for supporting carbon emissions reduction, biodiversity, and restoration policies.
+Land-use and land-cover maps from the [MapBiomas Project](https://brasil.mapbiomas.org/en/colecoes-mapbiomas) (Collection 11) are used as input data. The algorithm identifies secondary vegetation by detecting transitions from anthropic land use back to native vegetation classes in the MapBiomas annual time series. This dataset provides critical spatially explicit information for supporting carbon emissions reduction, biodiversity, and restoration policies.
 
 | Product | Description | Variable type |
 |:---|:---|:---:|
@@ -91,7 +91,7 @@ No local installation is required. GEE runs entirely in the browser.
 ```
 gee_brazil_sv/
 │
-├── 🌐 gee_brazil_sv_code.js                        ← Brazil mapping script (v8.1)
+├── 🌐 gee_brazil_sv_code.js                        ← Brazil mapping script (v9)
 ├── 🌐 gee_amazonia_sv_code.js                      ← Amazonia mapping script (v3)
 ├── 🔽 gee_brazil_sv_toolkit_download.js            ← Download toolkit by boundaries (v0.0.2)
 ├── 📤 Secondary_Vegetation_TIFfile_Export_Tool.js  ← Per-year GeoTIFF export tool
@@ -102,15 +102,15 @@ gee_brazil_sv/
 
 ### Script descriptions
 
-#### `gee_brazil_sv_code.js` — Brazil Mapping Script (v8.1)
+#### `gee_brazil_sv_code.js` — Brazil Mapping Script (v9)
 
-Maps the annual increment, extent, age, and loss of secondary vegetation across **all of Brazil** using MapBiomas Brazil Collection 10.1 (1986–2024). Configurable via the block at the top of the script:
+Maps the annual increment, extent, age, and loss of secondary vegetation across **all of Brazil** using MapBiomas Brazil Collection 11 (1986–2025). Configurable via the block at the top of the script:
 
 ```javascript
 var firstYear           = 1985;               // First year of the data series
-var lastYear            = 2024;               // Last year of the data series
-var mapbiomasCollection = 'collection10_1';   // MapBiomas collection version
-var mappingVersion      = 'v8_1';             // Version of the mapping process
+var lastYear            = 2025;               // Last year of the data series
+var mapbiomasCollection = 'collection11';     // MapBiomas collection version
+var mappingVersion      = 'v9';               // Version of the mapping process
 var assetFolder         = 'users/ybyrabr/public'; // Destination folder for exported assets
 ```
 
@@ -187,17 +187,18 @@ For downloading data clipped to specific states, municipalities, biomes, or prot
 The processed datasets are publicly available as multi-band GEE assets. Each band represents one year, named `classification_YYYY`. To load the latest version in GEE:
 
 ```javascript
-var age       = ee.Image('users/ybyrabr/public/secondary_forest_age_collection10_1_v8_1');
-var extent    = ee.Image('users/ybyrabr/public/secondary_forest_extent_collection10_1_v8_1');
-var increment = ee.Image('users/ybyrabr/public/secondary_forest_increment_collection10_1_v8_1');
-var loss      = ee.Image('users/ybyrabr/public/secondary_forest_loss_collection10_1_v8_1');
+var age       = ee.Image('users/ybyrabr/public/secondary_forest_age_collection11_v9');
+var extent    = ee.Image('users/ybyrabr/public/secondary_forest_extent_collection11_v9');
+var increment = ee.Image('users/ybyrabr/public/secondary_forest_increment_collection11_v9');
+var loss      = ee.Image('users/ybyrabr/public/secondary_forest_loss_collection11_v9');
 ```
 
 ### Brazil
 
 | Version | MapBiomas | Period | Coverage | Asset prefix |
 |:---:|:---:|:---:|:---|:---|
-| **v8.1** ⭐ | 10.1 | 1986–2024 | Forest Formation | `users/ybyrabr/public/secondary_forest_{product}_collection10_1_v8_1` |
+| **v9** ⭐ | 11 | 1986–2025 | Forest Formation | `users/ybyrabr/public/secondary_forest_{product}_collection11_v9` |
+| **v8.1** | 10.1 | 1986–2024 | Forest Formation | `users/ybyrabr/public/secondary_forest_{product}_collection10_1_v8_1` |
 | v8 | 10 | 1986–2024 | Forest Formation | `users/ybyrabr/public/secondary_forest_{product}_collection10_v8` |
 | v7.2 | 9 | 1986–2023 | Forest Formation | `users/ybyrabr/public/secondary_forest_{product}_collection9_v72` |
 | v7.1 | 9 | 1986–2023 | All Native Vegetation | `users/ybyrabr/public/secondary_vegetation_{product}_collection9_v71` |
@@ -252,7 +253,7 @@ The algorithm operates in four sequential steps applied annually to the MapBioma
 |:---|:---:|
 | Spatial resolution | 30 m |
 | Projection | EPSG:4326 (WGS84) |
-| Analysis period — Brazil | 1986–2024 |
+| Analysis period — Brazil | 1986–2025 |
 | Analysis period — Amazonia | 1986–2023 |
 | Output format | Multi-band GEE Image (one band per year) |
 
