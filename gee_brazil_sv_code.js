@@ -1,4 +1,4 @@
-// Brazilian Secondary Vegetation Mapping v8.1
+// Brazilian Secondary Vegetation Mapping v9
 // ******************************************************************************************
 //  * Institution:  National Institute for Space Research (INPE) / Amazon Environmental Research Institute (IPAM)
 //  * Funder:       National Council for Scientific and Technological Development - CNPq (Process CNPq 401741/2023-0)
@@ -12,7 +12,7 @@ var firstYear = 1985; // The first year of the data series
 var lastYear = 2025;  // The last year of the data series
 var totalYears = lastYear - firstYear + 1;
 var mapbiomasCollection = 'collection11';  // MapBiomas data collection version
-var mappingVersion = 'v8_1';  // Version of the mapping process
+var mappingVersion = 'v9';  // Version of the mapping process
 var assetFolder = 'users/ybyrabr/public';  // Destination folder for exported assets
 var brazil = ee.FeatureCollection("users/celsohlsj/brazil"); // Brazil's delimitation
 
