@@ -13,7 +13,7 @@ var lastYear = 2025;  // The last year of the data series
 var totalYears = lastYear - firstYear + 1;
 var mapbiomasCollection = 'collection11';  // MapBiomas data collection version
 var mappingVersion = 'v9';  // Version of the mapping process
-var assetFolder = 'users/ybyrabr/public';  // Destination folder for exported assets
+var assetFolder = 'projects/ee-redd-brazil/assets/public/ybyra-br';  // Destination folder for exported assets
 var brazil = ee.FeatureCollection("users/celsohlsj/brazil"); // Brazil's delimitation
 
 // 0. MapBiomas Data (Collection 11)
