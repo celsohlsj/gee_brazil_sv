@@ -111,7 +111,7 @@ var firstYear           = 1985;               // First year of the data series
 var lastYear            = 2025;               // Last year of the data series
 var mapbiomasCollection = 'collection11';     // MapBiomas collection version
 var mappingVersion      = 'v9';               // Version of the mapping process
-var assetFolder         = 'users/ybyrabr/public'; // Destination folder for exported assets
+var assetFolder         = 'projects/ee-redd-brazil/assets/public/ybyra-br'; // Destination folder for exported assets
 ```
 
 Exports four multi-band GEE assets (one band per year): `secondary_forest_increment_`, `secondary_forest_extent_`, `secondary_forest_age_`, and `secondary_forest_loss_`.
@@ -187,17 +187,17 @@ For downloading data clipped to specific states, municipalities, biomes, or prot
 The processed datasets are publicly available as multi-band GEE assets. Each band represents one year, named `classification_YYYY`. To load the latest version in GEE:
 
 ```javascript
-var age       = ee.Image('users/ybyrabr/public/secondary_forest_age_collection11_v9');
-var extent    = ee.Image('users/ybyrabr/public/secondary_forest_extent_collection11_v9');
-var increment = ee.Image('users/ybyrabr/public/secondary_forest_increment_collection11_v9');
-var loss      = ee.Image('users/ybyrabr/public/secondary_forest_loss_collection11_v9');
+var age       = ee.Image('projects/ee-redd-brazil/assets/public/ybyra-br/secondary_forest_age_collection11_v9');
+var extent    = ee.Image('projects/ee-redd-brazil/assets/public/ybyra-br/secondary_forest_extent_collection11_v9');
+var increment = ee.Image('projects/ee-redd-brazil/assets/public/ybyra-br/secondary_forest_increment_collection11_v9');
+var loss      = ee.Image('projects/ee-redd-brazil/assets/public/ybyra-br/secondary_forest_loss_collection11_v9');
 ```
 
 ### Brazil
 
 | Version | MapBiomas | Period | Coverage | Asset prefix |
 |:---:|:---:|:---:|:---|:---|
-| **v9** ⭐ | 11 | 1986–2025 | Forest Formation | `users/ybyrabr/public/secondary_forest_{product}_collection11_v9` |
+| **v9** ⭐ | 11 | 1986–2025 | Forest Formation | `projects/ee-redd-brazil/assets/public/ybyra-br/secondary_forest_{product}_collection11_v9` |
 | **v8.1** | 10.1 | 1986–2024 | Forest Formation | `users/ybyrabr/public/secondary_forest_{product}_collection10_1_v8_1` |
 | v8 | 10 | 1986–2024 | Forest Formation | `users/ybyrabr/public/secondary_forest_{product}_collection10_v8` |
 | v7.2 | 9 | 1986–2023 | Forest Formation | `users/ybyrabr/public/secondary_forest_{product}_collection9_v72` |
