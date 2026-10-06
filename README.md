@@ -125,7 +125,7 @@ var firstYear           = 1985;          // First year of the data series
 var lastYear            = 2023;          // Last year of the data series
 var mapbiomasCollection = 'collection6'; // MapBiomas Amazonia collection version
 var mappingVersion      = 'v3';          // Version of the mapping process
-var assetFolder         = 'projects/ee-redd-brazil/assets/public/ybyra-br'; // Destination folder for exported assets
+var assetFolder         = 'users/ybyrabr/public'; // Destination folder for exported assets
 ```
 
 #### `Secondary_Vegetation_TIFfile_Export_Tool.js` — GeoTIFF Export Tool
